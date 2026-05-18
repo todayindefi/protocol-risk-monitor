@@ -90,6 +90,7 @@ var FluidRenderer = (function () {
         renderTopline(snapshot);
         renderHeadlineAlerts(snapshot);
         renderSystemicVaults(snapshot);
+        renderCollateralHealth(snapshot);       // Chunk B — Tier A
         renderLenderPoolExposure(snapshot);
         renderUtilizationTable(snapshot);
         renderTickDensity(snapshot);
@@ -243,6 +244,85 @@ var FluidRenderer = (function () {
                 bufferLine +
                 dzLine +
                 '<div class="kv-row"><span class="kv-key">Address</span><span class="kv-val mono">' + shortAddr(v.address) + '</span></div>' +
+                '</div>';
+        }).join('');
+    }
+
+    // ---------- Collateral Health (Chunk B — Tier A) ----------
+
+    function renderCollateralHealth(snapshot) {
+        var panels = (snapshot.tier_a && snapshot.tier_a.panels) || [];
+        var container = document.getElementById('collateral-health');
+        if (!panels.length) {
+            container.innerHTML = '<div class="text-muted text-sm">No Tier A panels.</div>';
+            return;
+        }
+
+        // Build vault_id -> danger_zone_debt_usd map for cross-reference.
+        var vaultDz = {};
+        Object.values(snapshot.tier_c.tick_density).forEach(function (td) {
+            vaultDz[td.vault_id] = td.danger_zone_debt_usd || 0;
+        });
+
+        var sorted = panels.slice().sort(function (a, b) {
+            return (b.total_collateral_usd || 0) - (a.total_collateral_usd || 0);
+        });
+
+        container.innerHTML = sorted.map(function (p) {
+            var tierPill = p.tier === 'exotic'
+                ? '<span class="pill pill-orange">Exotic</span>'
+                : '<span class="pill pill-blue">Sensitive</span>';
+
+            // Oracle deviation block
+            var oracle = p.oracle_price != null ? p.oracle_price : 'not surfaced via API';
+            var market = p.market_price_ref != null ? p.market_price_ref : 'null';
+            var dev = p.deviation_pct != null ? fmtPct(p.deviation_pct, 3) : '—';
+            var devClass = '';
+            if (p.deviation_pct != null && p.deviation_threshold_pct != null &&
+                Math.abs(p.deviation_pct) >= p.deviation_threshold_pct) {
+                devClass = ' text-danger';
+            }
+
+            // Bad-debt branches
+            var bdActive = (p.bad_debt_branches || []).filter(function (b) { return b.status === 1; });
+            var bdLine = bdActive.length === 0
+                ? '<span class="text-ok">0 active</span>'
+                : '<span class="text-danger">' + bdActive.length + ' active · ' + fmtUSD(p.bad_debt_usd || 0) + '</span>';
+
+            // Cross-reference danger-zone debt across this panel's vault_ids
+            var panelDz = 0;
+            (p.vault_ids || []).forEach(function (vid) {
+                panelDz += vaultDz[vid] || 0;
+            });
+            var dzLine = panelDz > 0
+                ? '<div class="kv-row"><span class="kv-key">⚠ Danger-zone debt</span>' +
+                    '<span class="kv-val text-danger">' + fmtUSD(panelDz) + '</span></div>'
+                : '';
+
+            // Notes
+            var notesBlock = '';
+            if (p.notes && p.notes.length) {
+                notesBlock = '<div class="mt-3 text-xs text-muted">' +
+                    p.notes.map(function (n) { return '• ' + escapeHtml(n); }).join('<br>') +
+                    '</div>';
+            }
+
+            var vaultIdList = (p.vault_ids || []).join(', ');
+
+            return '<div class="card">' +
+                '<div class="card-title">' + escapeHtml(p.collateral) + ' ' + tierPill + '</div>' +
+                '<div class="card-subtitle">' +
+                    fmtPct(p.deviation_threshold_pct, 1) + ' threshold · ' +
+                    fmtUSD(p.total_collateral_usd) + ' across ' + (p.n_vaults || 0) + ' vault' +
+                    ((p.n_vaults || 0) === 1 ? '' : 's') +
+                    (vaultIdList ? ' (' + vaultIdList + ')' : '') +
+                '</div>' +
+                '<div class="kv-row"><span class="kv-key">Fluid oracle</span><span class="kv-val mono">' + escapeHtml(String(oracle)) + '</span></div>' +
+                '<div class="kv-row"><span class="kv-key">Market ref</span><span class="kv-val mono">' + escapeHtml(String(market)) + '</span></div>' +
+                '<div class="kv-row"><span class="kv-key">Deviation</span><span class="kv-val' + devClass + '">' + dev + '</span></div>' +
+                '<div class="kv-row"><span class="kv-key">Bad-debt branches</span><span class="kv-val">' + bdLine + '</span></div>' +
+                dzLine +
+                notesBlock +
                 '</div>';
         }).join('');
     }
