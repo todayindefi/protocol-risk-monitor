@@ -84,16 +84,82 @@ var FluidRenderer = (function () {
         return 'ok';
     }
 
+    // ---------- vault labels ----------
+
+    // Pair-based vault label. Examples:
+    //   formatVault({id: 162, coll_label: "reUSD", debt_label: "GHO"})  → "reUSD → GHO (162)"
+    //   formatVault({id: 13})                                            → "Vault 13"
+    // Always passes the ID through so users can cross-reference Fluid's UI.
+    function formatVault(opts) {
+        if (opts && opts.coll_label && opts.debt_label) {
+            return opts.coll_label + ' → ' + opts.debt_label + ' (' + opts.id + ')';
+        }
+        return 'Vault ' + (opts && opts.id);
+    }
+
+    // Best-effort vault_id → {coll_label, debt_label} lookup.
+    // The analyzer only emits full labels on tier_c.systemic_vaults (≥10% of debt).
+    // We additionally derive labels from tier_a panels (collateral side) and
+    // smart_supply / smart_borrow pools (pair-label on either side). Vaults
+    // outside all three (e.g. mid-size non-systemic single-asset vaults)
+    // fall through to the "Vault NNN" fallback in formatVault.
+    function buildVaultLabels(snapshot) {
+        var labels = {};
+        function set(vid, coll, debt) {
+            if (!labels[vid]) labels[vid] = { coll_label: null, debt_label: null };
+            if (coll != null && !labels[vid].coll_label) labels[vid].coll_label = coll;
+            if (debt != null && !labels[vid].debt_label) labels[vid].debt_label = debt;
+        }
+        function overwrite(vid, coll, debt) {
+            if (!labels[vid]) labels[vid] = { coll_label: null, debt_label: null };
+            if (coll != null) labels[vid].coll_label = coll;
+            if (debt != null) labels[vid].debt_label = debt;
+        }
+
+        // 1. tier_a panels — coll label only, weakest.
+        ((snapshot.tier_a && snapshot.tier_a.panels) || []).forEach(function (p) {
+            (p.vault_ids || []).forEach(function (vid) { set(vid, p.collateral, null); });
+        });
+
+        // 2. smart_supply_pools — pool label is the vault's collateral-side pair
+        //    (more specific than tier_a's collateral symbol).
+        (snapshot.tier_c.smart_supply_pools || []).forEach(function (pool) {
+            (pool.contributing_vault_ids || []).forEach(function (vid) {
+                overwrite(vid, pool.label, null);
+            });
+        });
+
+        // 3. smart_borrow_pools — pool label is the vault's debt-side pair.
+        (snapshot.tier_c.smart_borrow_pools || []).forEach(function (pool) {
+            (pool.contributing_vault_ids || []).forEach(function (vid) {
+                overwrite(vid, null, pool.label);
+            });
+        });
+
+        // 4. systemic_vaults — authoritative both-sides; overwrite everything else.
+        (snapshot.tier_c.systemic_vaults || []).forEach(function (v) {
+            overwrite(v.id, v.coll_label, v.debt_label);
+        });
+
+        return labels;
+    }
+
+    function formatVaultById(vid, labels) {
+        var l = labels[vid] || {};
+        return formatVault({ id: vid, coll_label: l.coll_label, debt_label: l.debt_label });
+    }
+
     // ---------- main entry ----------
 
     function render(snapshot) {
+        var vaultLabels = buildVaultLabels(snapshot);
         renderTopline(snapshot);
-        renderHeadlineAlerts(snapshot);
-        renderSystemicVaults(snapshot);
-        renderCollateralHealth(snapshot);       // Chunk B — Tier A
+        renderHeadlineAlerts(snapshot, vaultLabels);
+        renderSystemicVaults(snapshot, vaultLabels);
+        renderCollateralHealth(snapshot, vaultLabels);   // Chunk B — Tier A
         renderLenderPoolExposure(snapshot);
         renderUtilizationTable(snapshot);
-        renderTickDensity(snapshot);
+        renderTickDensity(snapshot, vaultLabels);
         renderSmartPools(snapshot);
         renderGovernance(snapshot);
         renderContext(snapshot);
@@ -124,7 +190,7 @@ var FluidRenderer = (function () {
 
     // ---------- Headline alerts ----------
 
-    function renderHeadlineAlerts(snapshot) {
+    function renderHeadlineAlerts(snapshot, vaultLabels) {
         var alerts = [];
 
         // Rule 1: vaults with danger_zone_debt_usd > $5M
@@ -136,7 +202,7 @@ var FluidRenderer = (function () {
                 var bufStr = buffer != null ? ' · buffer ' + buffer.toFixed(1) + '%' : '';
                 alerts.push({
                     sev: 'red',
-                    title: 'Vault ' + td.vault_id + ' danger zone',
+                    title: formatVaultById(td.vault_id, vaultLabels) + ' danger zone',
                     detail: fmtUSD(dz) + ' within ' + DANGER_PP_FROM_LIQ +
                         '% of liquidation' + bufStr +
                         ' · ' + fmtShare(td.danger_zone_share_of_vault_debt) +
@@ -212,7 +278,7 @@ var FluidRenderer = (function () {
         return found;
     }
 
-    function renderSystemicVaults(snapshot) {
+    function renderSystemicVaults(snapshot, vaultLabels) {
         var vaults = snapshot.tier_c.systemic_vaults;
         var container = document.getElementById('systemic-vaults');
         if (!vaults || vaults.length === 0) {
@@ -236,7 +302,7 @@ var FluidRenderer = (function () {
             var smart = smartFlags.length ? ' <span class="pill pill-blue">' + smartFlags.join(' · ') + '</span>' : '';
 
             return '<div class="card">' +
-                '<div class="card-title">Vault ' + v.id + ': ' + escapeHtml(v.coll_label) + ' → ' + escapeHtml(v.debt_label) + smart + '</div>' +
+                '<div class="card-title">' + escapeHtml(formatVaultById(v.id, vaultLabels)) + smart + '</div>' +
                 '<div class="card-subtitle">' + fmtShare(v.share_of_system_debt, 1) + ' of system debt · ' + (v.positions || '0') + ' positions</div>' +
                 '<div class="kv-row"><span class="kv-key">Borrow</span><span class="kv-val">' + fmtUSD(v.borrow_usd) + '</span></div>' +
                 '<div class="kv-row"><span class="kv-key">Supply</span><span class="kv-val">' + fmtUSD(v.supply_usd) + '</span></div>' +
@@ -250,7 +316,29 @@ var FluidRenderer = (function () {
 
     // ---------- Collateral Health (Chunk B — Tier A) ----------
 
-    function renderCollateralHealth(snapshot) {
+    // Renderer-side override for the reUSD Tier-A note. The analyzer currently
+    // emits a stale generic "two issuers, confirm which" note; Fluid was
+    // verified 2026-05-19 to hold Re Protocol's reUSD (0x5086bf…) on all
+    // reUSD vaults. Override returns null for any other collateral so the
+    // analyzer's notes pass through unchanged.
+    //
+    // TODO(remove): drop this override once LMT's fluid_risk_analyzer.py
+    // build_tier_a() emits the Re-Protocol-specific note natively. Tracking
+    // handoff: ~/riskAnalyst/specs/handoffs/fluid-renderer-vault-labels-protocol-risk-monitor.md §3.
+    function reUSDDisambiguationNote(panel) {
+        if (panel.collateral !== 'reUSD') return null;
+        return [
+            "Fluid's reUSD = Re Protocol's reUSD (0x5086bf358635b81d8c47c66d1c8b9e567db70c72, " +
+                "'Re Protocol Deposit Token', 5.0/10 per ~/riskAnalyst/assets/reusd-re.md). " +
+                "Tokenized senior reinsurance tranche from Resilience BVI — NOT Resupply's CDP " +
+                "(0x57aB1E…, 3.5/10, which Fluid does not list). Three binding caveats: " +
+                "(a) NAV is off-chain (Resolv-pattern risk applies), (b) US persons cannot " +
+                "redeem on the primary path (secondary-market ATL $0.8734), (c) recursive " +
+                "Ethena exposure on the liquid sleeve. Verified 2026-05-19."
+        ];
+    }
+
+    function renderCollateralHealth(snapshot, vaultLabels) {
         var panels = (snapshot.tier_a && snapshot.tier_a.panels) || [];
         var container = document.getElementById('collateral-health');
         if (!panels.length) {
@@ -299,15 +387,20 @@ var FluidRenderer = (function () {
                     '<span class="kv-val text-danger">' + fmtUSD(panelDz) + '</span></div>'
                 : '';
 
-            // Notes
+            // Notes: apply collateral-specific override if any.
+            var notes = reUSDDisambiguationNote(p) || p.notes || [];
             var notesBlock = '';
-            if (p.notes && p.notes.length) {
+            if (notes.length) {
                 notesBlock = '<div class="mt-3 text-xs text-muted">' +
-                    p.notes.map(function (n) { return '• ' + escapeHtml(n); }).join('<br>') +
+                    notes.map(function (n) { return '• ' + escapeHtml(n); }).join('<br>') +
                     '</div>';
             }
 
-            var vaultIdList = (p.vault_ids || []).join(', ');
+            // Pair-labeled vault list; falls back to "Vault NNN" for entries
+            // that lack a debt-side label in the current snapshot.
+            var vaultList = (p.vault_ids || [])
+                .map(function (vid) { return formatVaultById(vid, vaultLabels); })
+                .join(', ');
 
             return '<div class="card">' +
                 '<div class="card-title">' + escapeHtml(p.collateral) + ' ' + tierPill + '</div>' +
@@ -315,7 +408,7 @@ var FluidRenderer = (function () {
                     fmtPct(p.deviation_threshold_pct, 1) + ' threshold · ' +
                     fmtUSD(p.total_collateral_usd) + ' across ' + (p.n_vaults || 0) + ' vault' +
                     ((p.n_vaults || 0) === 1 ? '' : 's') +
-                    (vaultIdList ? ' (' + vaultIdList + ')' : '') +
+                    (vaultList ? '<br><span class="text-dim">' + escapeHtml(vaultList) + '</span>' : '') +
                 '</div>' +
                 '<div class="kv-row"><span class="kv-key">Fluid oracle</span><span class="kv-val mono">' + escapeHtml(String(oracle)) + '</span></div>' +
                 '<div class="kv-row"><span class="kv-key">Market ref</span><span class="kv-val mono">' + escapeHtml(String(market)) + '</span></div>' +
@@ -412,7 +505,7 @@ var FluidRenderer = (function () {
 
     // ---------- Tick Density ----------
 
-    function renderTickDensity(snapshot) {
+    function renderTickDensity(snapshot, vaultLabels) {
         // Rank by danger_zone_debt_usd desc, then by vault_debt_usd_in_window desc.
         var entries = Object.entries(snapshot.tier_c.tick_density)
             .map(function (kv) {
@@ -463,7 +556,7 @@ var FluidRenderer = (function () {
 
             return '<div class="panel">' +
                 '<div class="flex justify-between items-baseline mb-1">' +
-                    '<div class="font-semibold">Vault ' + td.vault_id + '</div>' +
+                    '<div class="font-semibold">' + escapeHtml(formatVaultById(td.vault_id, vaultLabels)) + '</div>' +
                     '<div class="text-xs text-muted">buffer ' + bufStr +
                         ' · top tick ' + (td.top_tick != null ? td.top_tick : '—') +
                         ' · liq ' + (td.liquidation_tick_estimated != null ? td.liquidation_tick_estimated : '—') +
