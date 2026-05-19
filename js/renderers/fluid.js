@@ -97,12 +97,10 @@ var FluidRenderer = (function () {
         return 'Vault ' + (opts && opts.id);
     }
 
-    // Best-effort vault_id → {coll_label, debt_label} lookup.
-    // The analyzer only emits full labels on tier_c.systemic_vaults (≥10% of debt).
-    // We additionally derive labels from tier_a panels (collateral side) and
-    // smart_supply / smart_borrow pools (pair-label on either side). Vaults
-    // outside all three (e.g. mid-size non-systemic single-asset vaults)
-    // fall through to the "Vault NNN" fallback in formatVault.
+    // Best-effort vault_id → {coll_label, debt_label} lookup. Sources in
+    // ascending authority: tier_a panels (coll only), smart_supply / smart_borrow
+    // pools, systemic_vaults, and finally tier_c.vault_labels which is the
+    // analyzer's authoritative both-sides map for every vault.
     function buildVaultLabels(snapshot) {
         var labels = {};
         function set(vid, coll, debt) {
@@ -139,6 +137,13 @@ var FluidRenderer = (function () {
         // 4. systemic_vaults — authoritative both-sides; overwrite everything else.
         (snapshot.tier_c.systemic_vaults || []).forEach(function (v) {
             overwrite(v.id, v.coll_label, v.debt_label);
+        });
+
+        // 5. tier_c.vault_labels — analyzer's authoritative both-sides map for
+        //    every vault. Wins over all derived sources above.
+        Object.keys(snapshot.tier_c.vault_labels || {}).forEach(function (k) {
+            var v = snapshot.tier_c.vault_labels[k] || {};
+            overwrite(parseInt(k, 10), v.coll_label, v.debt_label);
         });
 
         return labels;
@@ -316,28 +321,6 @@ var FluidRenderer = (function () {
 
     // ---------- Collateral Health (Chunk B — Tier A) ----------
 
-    // Renderer-side override for the reUSD Tier-A note. The analyzer currently
-    // emits a stale generic "two issuers, confirm which" note; Fluid was
-    // verified 2026-05-19 to hold Re Protocol's reUSD (0x5086bf…) on all
-    // reUSD vaults. Override returns null for any other collateral so the
-    // analyzer's notes pass through unchanged.
-    //
-    // TODO(remove): drop this override once LMT's fluid_risk_analyzer.py
-    // build_tier_a() emits the Re-Protocol-specific note natively. Tracking
-    // handoff: ~/riskAnalyst/specs/handoffs/fluid-renderer-vault-labels-protocol-risk-monitor.md §3.
-    function reUSDDisambiguationNote(panel) {
-        if (panel.collateral !== 'reUSD') return null;
-        return [
-            "Fluid's reUSD = Re Protocol's reUSD (0x5086bf358635b81d8c47c66d1c8b9e567db70c72, " +
-                "'Re Protocol Deposit Token', 5.0/10 per ~/riskAnalyst/assets/reusd-re.md). " +
-                "Tokenized senior reinsurance tranche from Resilience BVI — NOT Resupply's CDP " +
-                "(0x57aB1E…, 3.5/10, which Fluid does not list). Three binding caveats: " +
-                "(a) NAV is off-chain (Resolv-pattern risk applies), (b) US persons cannot " +
-                "redeem on the primary path (secondary-market ATL $0.8734), (c) recursive " +
-                "Ethena exposure on the liquid sleeve. Verified 2026-05-19."
-        ];
-    }
-
     function renderCollateralHealth(snapshot, vaultLabels) {
         var panels = (snapshot.tier_a && snapshot.tier_a.panels) || [];
         var container = document.getElementById('collateral-health');
@@ -387,8 +370,7 @@ var FluidRenderer = (function () {
                     '<span class="kv-val text-danger">' + fmtUSD(panelDz) + '</span></div>'
                 : '';
 
-            // Notes: apply collateral-specific override if any.
-            var notes = reUSDDisambiguationNote(p) || p.notes || [];
+            var notes = p.notes || [];
             var notesBlock = '';
             if (notes.length) {
                 notesBlock = '<div class="mt-3 text-xs text-muted">' +
