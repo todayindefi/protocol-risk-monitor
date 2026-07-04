@@ -41,11 +41,21 @@ jobs:
         uses: actions/deploy-pages@v4
         continue-on-error: true
 
-      - name: Wait before retry
+      - name: Wait before retry 1
         if: steps.deployment.outcome == 'failure'
         run: sleep 30
 
-      - name: Deploy to GitHub Pages (retry)
+      - name: Deploy to GitHub Pages (retry 1)
         id: deployment_retry
         if: steps.deployment.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
+
+      - name: Wait before retry 2
+        if: steps.deployment.outcome == 'failure' && steps.deployment_retry.outcome == 'failure'
+        run: sleep 90
+
+      - name: Deploy to GitHub Pages (retry 2 - final)
+        id: deployment_retry2
+        if: steps.deployment.outcome == 'failure' && steps.deployment_retry.outcome == 'failure'
         uses: actions/deploy-pages@v4
