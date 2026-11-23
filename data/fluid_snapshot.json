@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-23T07:42:05Z",
+  "generated_at": "2026-11-23T08:42:06Z",
   "schema_version": 1,
   "dedup_check": {
     "ok": true,
     "warnings": []
   },
   "tier_a": {
-    "generated_at": "2026-11-23T07:42:05Z",
+    "generated_at": "2026-11-23T08:42:06Z",
     "panels": [
       {
         "collateral": "sUSDai",
@@ -95,7 +95,7 @@
             "branch_id": 1,
             "status": 1,
             "status_label": "liquidated",
-            "debt_normal_usd": 3005.291092849858,
+            "debt_normal_usd": 3005.3186955759106,
             "collateral_normal_usd": 3871.6527237138366,
             "tick": -13199,
             "ratio_pct": 2.558957322832908e-07
@@ -125,7 +125,7 @@
             "branch_id": 1,
             "status": 1,
             "status_label": "liquidated",
-            "debt_normal_usd": 672.7123881100275,
+            "debt_normal_usd": 672.7174249589489,
             "collateral_normal_usd": 863.8087064657943,
             "tick": 5242,
             "ratio_pct": 258403.8180746042
@@ -175,7 +175,7 @@
     ]
   },
   "tier_b": {
-    "generated_at": "2026-11-23T07:42:05Z",
+    "generated_at": "2026-11-23T08:42:06Z",
     "status": "stub",
     "addresses_to_watch": {
       "governor_bravo": "0x0204cd037B2ec03605CFdFe482D8e257C765fA1B",
@@ -191,24 +191,36 @@
     ]
   },
   "tier_c": {
-    "generated_at": "2026-11-23T07:42:05Z",
+    "generated_at": "2026-11-23T08:42:06Z",
     "totals": {
-      "collateral_usd": 615444153.2788668,
-      "debt_usd": 484027207.51467085,
-      "utilization_pct": 78.64681221455216,
-      "absorbed_supply_usd": 0.2542833569184611,
-      "absorbed_borrow_usd": 0.22703178715155412
+      "collateral_usd": 615485941.2160151,
+      "debt_usd": 484386352.1502477,
+      "utilization_pct": 78.69982394614019,
+      "absorbed_supply_usd": 0.2542833601780466,
+      "absorbed_borrow_usd": 0.2270329209807438
     },
     "liquidity_layer_utilization": [
       {
         "asset_address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
         "asset_symbol": "USDC",
-        "utilization_pct": 93.41,
+        "utilization_pct": 92.77,
         "max_utilization_pct": 100.0,
-        "total_supply_usd": 153793262.01173753,
-        "total_borrow_usd": 143374782.02301535,
-        "borrow_apr_pct": 8.41,
-        "supply_apr_pct": 7.05,
+        "total_supply_usd": 153754882.2719104,
+        "total_borrow_usd": 142295773.72110504,
+        "borrow_apr_pct": 7.94,
+        "supply_apr_pct": 6.61,
+        "fee_pct": 10.0,
+        "status": "warn"
+      },
+      {
+        "asset_address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+        "asset_symbol": "USDT",
+        "utilization_pct": 87.9,
+        "max_utilization_pct": 100.0,
+        "total_supply_usd": 149663931.4321882,
+        "total_borrow_usd": 131403753.39857763,
+        "borrow_apr_pct": 6.72,
+        "supply_apr_pct": 5.31,
         "fee_pct": 10.0,
         "status": "warn"
       },
@@ -217,22 +229,10 @@
         "asset_symbol": "ETH",
         "utilization_pct": 84.25,
         "max_utilization_pct": 100.0,
-        "total_supply_usd": 155505434.66626218,
-        "total_borrow_usd": 130872069.23417163,
+        "total_supply_usd": 155552649.27357236,
+        "total_borrow_usd": 130860159.17663702,
         "borrow_apr_pct": 2.1,
-        "supply_apr_pct": 1.59,
-        "fee_pct": 10.0,
-        "status": "warn"
-      },
-      {
-        "asset_address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
-        "asset_symbol": "USDT",
-        "utilization_pct": 86.41,
-        "max_utilization_pct": 100.0,
-        "total_supply_usd": 150037111.32263723,
-        "total_borrow_usd": 130076519.55361181,
-        "borrow_apr_pct": 6.35,
-        "supply_apr_pct": 4.95,
+        "supply_apr_pct": 1.58,
         "fee_pct": 10.0,
         "status": "warn"
       },
@@ -241,8 +241,8 @@
         "asset_symbol": "wstETH",
         "utilization_pct": 27.89,
         "max_utilization_pct": 95.0,
-        "total_supply_usd": 154493755.39108196,
-        "total_borrow_usd": 43496090.94335226,
+        "total_supply_usd": 154483186.23701465,
+        "total_borrow_usd": 43505563.431634694,
         "borrow_apr_pct": 0.11,
         "supply_apr_pct": 0.02,
         "fee_pct": 10.0,
@@ -251,12 +251,12 @@
       {
         "asset_address": "0x40D16FC0246aD3160Ccc09B8D0D3A2cD28aE6C2f",
         "asset_symbol": "GHO",
-        "utilization_pct": 89.6,
+        "utilization_pct": 90.4,
         "max_utilization_pct": 100.0,
-        "total_supply_usd": 25402649.51970083,
-        "total_borrow_usd": 22775420.61925202,
-        "borrow_apr_pct": 8.22,
-        "supply_apr_pct": 6.63,
+        "total_supply_usd": 25286808.595994044,
+        "total_borrow_usd": 22882472.497064203,
+        "borrow_apr_pct": 8.52,
+        "supply_apr_pct": 6.93,
         "fee_pct": 10.0,
         "status": "warn"
       },
@@ -265,8 +265,8 @@
         "asset_symbol": "WBTC",
         "utilization_pct": 21.08,
         "max_utilization_pct": 100.0,
-        "total_supply_usd": 71449123.8187728,
-        "total_borrow_usd": 15029161.537215376,
+        "total_supply_usd": 71479181.64904013,
+        "total_borrow_usd": 15029167.370056909,
         "borrow_apr_pct": 0.34,
         "supply_apr_pct": 0.06,
         "fee_pct": 10.0,
@@ -277,8 +277,8 @@
         "asset_symbol": "USDtb",
         "utilization_pct": 91.46,
         "max_utilization_pct": 100.0,
-        "total_supply_usd": 1608953.8232786006,
-        "total_borrow_usd": 1471682.3798005816,
+        "total_supply_usd": 1610697.0964157926,
+        "total_borrow_usd": 1471691.804577949,
         "borrow_apr_pct": 5.61,
         "supply_apr_pct": 4.61,
         "fee_pct": 10.0,
@@ -289,8 +289,8 @@
         "asset_symbol": "cbBTC",
         "utilization_pct": 4.66,
         "max_utilization_pct": 100.0,
-        "total_supply_usd": 27024579.553653713,
-        "total_borrow_usd": 1260877.5273364033,
+        "total_supply_usd": 27024579.643745437,
+        "total_borrow_usd": 1267048.2945746535,
         "borrow_apr_pct": 0.07,
         "supply_apr_pct": 0.0,
         "fee_pct": 10.0,
@@ -301,7 +301,7 @@
         "asset_symbol": "USDe",
         "utilization_pct": 0.02,
         "max_utilization_pct": 100.0,
-        "total_supply_usd": 231459.39870970734,
+        "total_supply_usd": 207547.62893406578,
         "total_borrow_usd": 100.81536279030328,
         "borrow_apr_pct": 0.0,
         "supply_apr_pct": 0.0,
@@ -313,7 +313,7 @@
         "asset_symbol": "weETH",
         "utilization_pct": 0.0,
         "max_utilization_pct": 100.0,
-        "total_supply_usd": 8353946.686988159,
+        "total_supply_usd": 8353944.9551256485,
         "total_borrow_usd": 0.0,
         "borrow_apr_pct": 0.0,
         "supply_apr_pct": 0.0,
@@ -325,7 +325,7 @@
         "asset_symbol": "sUSDe",
         "utilization_pct": 0.0,
         "max_utilization_pct": 100.0,
-        "total_supply_usd": 107799.21676457471,
+        "total_supply_usd": 113308.24772302997,
         "total_borrow_usd": 0.0,
         "borrow_apr_pct": 0.0,
         "supply_apr_pct": 0.0,
@@ -541,7 +541,7 @@
         "asset_symbol": "PAXG",
         "utilization_pct": 0.0,
         "max_utilization_pct": 100.0,
-        "total_supply_usd": 2691811.1781508215,
+        "total_supply_usd": 2691739.496354362,
         "total_borrow_usd": 0.0,
         "borrow_apr_pct": 0.0,
         "supply_apr_pct": 0.0,
@@ -553,7 +553,7 @@
         "asset_symbol": "XAUt",
         "utilization_pct": 0.0,
         "max_utilization_pct": 100.0,
-        "total_supply_usd": 1452983.0497581984,
+        "total_supply_usd": 1453054.7660483338,
         "total_borrow_usd": 0.0,
         "borrow_apr_pct": 0.0,
         "supply_apr_pct": 0.0,
@@ -637,7 +637,7 @@
         "asset_symbol": "osETH",
         "utilization_pct": 0.0,
         "max_utilization_pct": 100.0,
-        "total_supply_usd": 8094092.408431191,
+        "total_supply_usd": 8063108.6327785775,
         "total_borrow_usd": 0.0,
         "borrow_apr_pct": 0.0,
         "supply_apr_pct": 0.0,
@@ -649,7 +649,7 @@
         "asset_symbol": "reUSD",
         "utilization_pct": 0.0,
         "max_utilization_pct": 100.0,
-        "total_supply_usd": 35131599.39232733,
+        "total_supply_usd": 35084378.75567064,
         "total_borrow_usd": 0.0,
         "borrow_apr_pct": 0.0,
         "supply_apr_pct": 0.0,
@@ -685,7 +685,7 @@
         "asset_symbol": "sUSDai",
         "utilization_pct": 0.0,
         "max_utilization_pct": 100.0,
-        "total_supply_usd": 78091683.39489838,
+        "total_supply_usd": 78091678.97865799,
         "total_borrow_usd": 0.0,
         "borrow_apr_pct": 0.0,
         "supply_apr_pct": 0.0,
@@ -729,15 +729,15 @@
         "ticks": [
           {
             "tick": 50,
-            "debt_normal_usd": 2.017539986803111,
-            "collateral_normal_usd": 2.187208779710194,
+            "debt_normal_usd": 2.0175448233354736,
+            "collateral_normal_usd": 2.18720884864992,
             "ratio_pct": 107.78235821658122,
             "distance_pct_from_top": 0.0
           }
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 2.017539986803111
+        "vault_debt_usd_in_window": 2.0175448233354736
       },
       "0x40d9b8417e6e1dcd358f04e3328bced061018a82": {
         "vault_id": 6,
@@ -750,56 +750,56 @@
         "ticks": [
           {
             "tick": -162,
-            "debt_normal_usd": 0.23771717374116186,
+            "debt_normal_usd": 0.237717203591602,
             "collateral_normal_usd": 0.2510468538628725,
             "ratio_pct": 78.44143174816534,
             "distance_pct_from_top": 0.0
           },
           {
             "tick": -163,
-            "debt_normal_usd": 287.3895556615947,
+            "debt_normal_usd": 287.389591749459,
             "collateral_normal_usd": 303.9598065650973,
             "ratio_pct": 78.3239458294212,
             "distance_pct_from_top": -0.1497753369945065
           },
           {
             "tick": -166,
-            "debt_normal_usd": 2.686595801111278,
+            "debt_normal_usd": 2.686596138470458,
             "collateral_normal_usd": 2.8543049526900224,
             "ratio_pct": 77.97254280895957,
             "distance_pct_from_top": -0.5977567323236954
           },
           {
             "tick": -169,
-            "debt_normal_usd": 223.13971885107034,
+            "debt_normal_usd": 223.13974687100261,
             "collateral_normal_usd": 238.13749552455712,
             "ratio_pct": 77.62271636998248,
             "distance_pct_from_top": -1.043728244037312
           },
           {
             "tick": -170,
-            "debt_normal_usd": 0.4103265062194661,
+            "debt_normal_usd": 0.41032655774467586,
             "collateral_normal_usd": 0.4385624317899564,
             "ratio_pct": 77.50645668495504,
             "distance_pct_from_top": -1.1919403335370227
           },
           {
             "tick": -174,
-            "debt_normal_usd": 880765.5141363544,
+            "debt_normal_usd": 880765.6247351764,
             "collateral_normal_usd": 947034.8702587228,
             "ratio_pct": 77.04315662213517,
             "distance_pct_from_top": -1.7825721622717228
           },
           {
             "tick": -176,
-            "debt_normal_usd": 9.605408366075723,
+            "debt_normal_usd": 9.605409572238809,
             "collateral_normal_usd": 10.359133000535262,
             "ratio_pct": 76.81254615544,
             "distance_pct_from_top": -2.076562801600612
           },
           {
             "tick": -178,
-            "debt_normal_usd": 5.687049734850947,
+            "debt_normal_usd": 5.687050448980863,
             "collateral_normal_usd": 6.151719281447695,
             "ratio_pct": 76.58262596663167,
             "distance_pct_from_top": -2.3696734494869087
@@ -807,7 +807,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 881294.6705084491
+        "vault_debt_usd_in_window": 881294.7811737179
       },
       "0x4045720a33193b4fe66c94dfbc8d37b0b4d9b469": {
         "vault_id": 7,
@@ -820,7 +820,7 @@
         "ticks": [
           {
             "tick": -18504,
-            "debt_normal_usd": 111.13830834880083,
+            "debt_normal_usd": 111.13932874719684,
             "collateral_normal_usd": 125.90767277880228,
             "ratio_pct": 9.010606787099524e-11,
             "distance_pct_from_top": 0.0
@@ -828,7 +828,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 111.13830834880083
+        "vault_debt_usd_in_window": 111.13932874719684
       },
       "0xbfadea65591235f38809076e14803ac84acf3f97": {
         "vault_id": 8,
@@ -841,7 +841,7 @@
         "ticks": [
           {
             "tick": -18504,
-            "debt_normal_usd": 109.97254780458651,
+            "debt_normal_usd": 109.9733707995322,
             "collateral_normal_usd": 125.90766858682021,
             "ratio_pct": 9.010606787099524e-11,
             "distance_pct_from_top": 0.0
@@ -849,7 +849,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 109.97254780458651
+        "vault_debt_usd_in_window": 109.9733707995322
       },
       "0x0c8c77b7ff4c2af7f6cebbe67350a490e3dd6cb3": {
         "vault_id": 11,
@@ -858,54 +858,61 @@
         "top_tick": -13667,
         "to_tick_scanned": -13686,
         "liquidation_threshold_pct": 92.0,
-        "liquidation_tick_estimated": -13519,
+        "liquidation_tick_estimated": -13518,
         "ticks": [
           {
             "tick": -13667,
-            "debt_normal_usd": 4431674.362921597,
-            "collateral_normal_usd": 5397771.309944941,
+            "debt_normal_usd": 4431715.066905444,
+            "collateral_normal_usd": 5397781.121543975,
             "ratio_pct": 1.268868874805893e-07,
             "distance_pct_from_top": 0.0
           },
           {
             "tick": -13674,
-            "debt_normal_usd": 936.1883993401123,
-            "collateral_normal_usd": 1152.3026763678213,
+            "debt_normal_usd": 936.1969982703761,
+            "collateral_normal_usd": 1152.3047709233658,
             "ratio_pct": 1.2556253319797452e-07,
             "distance_pct_from_top": -1.043728244037323
           },
           {
             "tick": -13675,
-            "debt_normal_usd": 301100.0753212308,
-            "collateral_normal_usd": 371163.3899936613,
+            "debt_normal_usd": 950.8077870773535,
+            "collateral_normal_usd": 1172.0436846893845,
             "ratio_pct": 1.253744714907384e-07,
             "distance_pct_from_top": -1.1919403335370227
           },
           {
+            "tick": -13677,
+            "debt_normal_usd": 300061.6745450131,
+            "collateral_normal_usd": 370991.1117868624,
+            "ratio_pct": 1.249991926645612e-07,
+            "distance_pct_from_top": -1.4876988895458965
+          },
+          {
             "tick": -13679,
-            "debt_normal_usd": 983309.7498718607,
-            "collateral_normal_usd": 1219406.2830110507,
+            "debt_normal_usd": 983318.7813620969,
+            "collateral_normal_usd": 1219408.4995416931,
             "ratio_pct": 1.2462503714678723e-07,
             "distance_pct_from_top": -1.7825721622717339
           },
           {
             "tick": -13680,
-            "debt_normal_usd": 4329608.398397581,
-            "collateral_normal_usd": 5377218.127042569,
+            "debt_normal_usd": 4329648.164927128,
+            "collateral_normal_usd": 5377227.901281816,
             "ratio_pct": 1.244383795774211e-07,
             "distance_pct_from_top": -1.9296776458030296
           },
           {
             "tick": -13686,
-            "debt_normal_usd": 374874.08440693154,
-            "collateral_normal_usd": 469786.1148529389,
+            "debt_normal_usd": 374877.52754593414,
+            "collateral_normal_usd": 469786.968789263,
             "ratio_pct": 1.2332429043494424e-07,
             "distance_pct_from_top": -2.8076951971810704
           }
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 10421502.85931854
+        "vault_debt_usd_in_window": 10421508.220070964
       },
       "0xe16a6f5359abb1f61ce71e25dd0932e3e00b00eb": {
         "vault_id": 12,
@@ -914,33 +921,33 @@
         "top_tick": -13670,
         "to_tick_scanned": -13685,
         "liquidation_threshold_pct": 92.0,
-        "liquidation_tick_estimated": -13519,
+        "liquidation_tick_estimated": -13518,
         "ticks": [
           {
             "tick": -13670,
-            "debt_normal_usd": 29714.406420129162,
-            "collateral_normal_usd": 36721.37563384169,
+            "debt_normal_usd": 29714.628881455912,
+            "collateral_normal_usd": 36721.44238276324,
             "ratio_pct": 1.2631760518709042e-07,
             "distance_pct_from_top": 0.0
           },
           {
             "tick": -13675,
-            "debt_normal_usd": 12490.1360325241,
-            "collateral_normal_usd": 15551.554959960895,
+            "debt_normal_usd": 12490.229542328463,
+            "collateral_normal_usd": 15551.583228224381,
             "ratio_pct": 1.253744714907384e-07,
             "distance_pct_from_top": -0.7466367771579718
           },
           {
             "tick": -13684,
-            "debt_normal_usd": 2.0976613032078815,
-            "collateral_normal_usd": 2.647285383479162,
+            "debt_normal_usd": 2.097677283692264,
+            "collateral_normal_usd": 2.6472901954841945,
             "ratio_pct": 1.2369454078590255e-07,
             "distance_pct_from_top": -2.0765628016006343
           }
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 42206.64011395647
+        "vault_debt_usd_in_window": 42206.95610106807
       },
       "0x82b27fa821419f5689381b565a8b0786aa2548de": {
         "vault_id": 13,
@@ -953,99 +960,99 @@
         "ticks": [
           {
             "tick": 74,
-            "debt_normal_usd": 497016.4867300825,
-            "collateral_normal_usd": 522667.98046800925,
+            "debt_normal_usd": 497017.67819958075,
+            "collateral_normal_usd": 522667.9969424677,
             "ratio_pct": 111.73019805113167,
             "distance_pct_from_top": 0.0
           },
           {
             "tick": 73,
-            "debt_normal_usd": 312.0712447936443,
-            "collateral_normal_usd": 328.66980494766403,
+            "debt_normal_usd": 312.07199290437984,
+            "collateral_normal_usd": 328.6698153073135,
             "ratio_pct": 111.56285377047594,
             "distance_pct_from_top": -0.14977533699451762
           },
           {
             "tick": 72,
-            "debt_normal_usd": 213132.2404467952,
-            "collateral_normal_usd": 224805.0990405738,
+            "debt_normal_usd": 213132.75137665443,
+            "collateral_normal_usd": 224805.10612641493,
             "ratio_pct": 111.39576013028052,
             "distance_pct_from_top": -0.29932634747331655
           },
           {
             "tick": 71,
-            "debt_normal_usd": 7740.956591336608,
-            "collateral_normal_usd": 8177.161837648159,
+            "debt_normal_usd": 7740.975148293797,
+            "collateral_normal_usd": 8177.162095391734,
             "ratio_pct": 111.2289167551478,
             "distance_pct_from_top": -0.4486533674221804
           },
           {
             "tick": 70,
-            "debt_normal_usd": 33785.521673994415,
-            "collateral_normal_usd": 35742.88006278487,
+            "debt_normal_usd": 33785.60266611366,
+            "collateral_normal_usd": 35742.881189397965,
             "ratio_pct": 111.06232327024242,
             "distance_pct_from_top": -0.5977567323237065
           },
           {
             "tick": 68,
-            "debt_normal_usd": 73554.16158194181,
-            "collateral_normal_usd": 78049.1308983673,
+            "debt_normal_usd": 73554.33790917107,
+            "collateral_normal_usd": 78049.13335847048,
             "ratio_pct": 110.72988447457858,
             "distance_pct_from_top": -0.895293836403388
           },
           {
             "tick": 66,
-            "debt_normal_usd": 97132.79886454923,
-            "collateral_normal_usd": 103378.1205401411,
+            "debt_normal_usd": 97133.03171551136,
+            "collateral_normal_usd": 103378.12379861229,
             "ratio_pct": 110.39844075581944,
             "distance_pct_from_top": -1.1919403335370227
           },
           {
             "tick": 65,
-            "debt_normal_usd": 2858.9970409475263,
-            "collateral_normal_usd": 3047.385443374645,
+            "debt_normal_usd": 2859.0038946593468,
+            "collateral_normal_usd": 3047.385539428023,
             "ratio_pct": 110.23309111914071,
             "distance_pct_from_top": -1.3399304378802213
           },
           {
             "tick": 63,
-            "debt_normal_usd": 1089770.5754409388,
-            "collateral_normal_usd": 1165066.3731422299,
+            "debt_normal_usd": 1089773.1878862712,
+            "collateral_normal_usd": 1165066.409865041,
             "ratio_pct": 109.90313443378685,
             "distance_pct_from_top": -1.6352460205151353
           },
           {
             "tick": 62,
-            "debt_normal_usd": 179578.91396512662,
-            "collateral_normal_usd": 192274.58580662124,
+            "debt_normal_usd": 179579.34445949498,
+            "collateral_normal_usd": 192274.59186710286,
             "ratio_pct": 109.73852664382113,
             "distance_pct_from_top": -1.7825721622717228
           },
           {
             "tick": 60,
-            "debt_normal_usd": 27463.80790229703,
-            "collateral_normal_usd": 29493.696282823214,
+            "debt_normal_usd": 27463.873739729584,
+            "collateral_normal_usd": 29493.697212462474,
             "ratio_pct": 109.41005032024715,
             "distance_pct_from_top": -2.0765628016006343
           },
           {
             "tick": 59,
-            "debt_normal_usd": 81690.77655508711,
-            "collateral_normal_usd": 87860.24887142952,
+            "debt_normal_usd": 81690.972387763,
+            "collateral_normal_usd": 87860.25164077847,
             "ratio_pct": 109.24618104867415,
             "distance_pct_from_top": -2.223227959661145
           },
           {
             "tick": 58,
-            "debt_normal_usd": 0.3656001748010037,
-            "collateral_normal_usd": 0.3938009440671564,
+            "debt_normal_usd": 0.365601051233614,
+            "collateral_normal_usd": 0.39380095647973407,
             "ratio_pct": 109.08255721285485,
             "distance_pct_from_top": -2.36967344948692
           }
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 2304037.673638065
+        "vault_debt_usd_in_window": 2304043.196977199
       },
       "0x1982cc7b1570c2503282d0a0b41f69b3b28fdcc3": {
         "vault_id": 14,
@@ -1054,26 +1061,26 @@
         "top_tick": -13582,
         "to_tick_scanned": -13601,
         "liquidation_threshold_pct": 88.0,
-        "liquidation_tick_estimated": -13400,
+        "liquidation_tick_estimated": -13399,
         "ticks": [
           {
             "tick": -13582,
-            "debt_normal_usd": 2769.8156049103845,
-            "collateral_normal_usd": 3549.3061328129843,
+            "debt_normal_usd": 2769.8410449115313,
+            "collateral_normal_usd": 3549.3062446868676,
             "ratio_pct": 1.441278150429238e-07,
             "distance_pct_from_top": 0.0
           },
           {
             "tick": -13587,
-            "debt_normal_usd": 10.597472967884611,
-            "collateral_normal_usd": 13.682004225420966,
+            "debt_normal_usd": 10.597570910140057,
+            "collateral_normal_usd": 13.68200465667679,
             "ratio_pct": 1.4305170376969911e-07,
             "distance_pct_from_top": -0.7466367771579718
           }
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 2780.413077878269
+        "vault_debt_usd_in_window": 2780.438615821671
       },
       "0xeaef563015634a9d0ee6cf1357a3b205c35e028d": {
         "vault_id": 16,
@@ -1086,85 +1093,85 @@
         "ticks": [
           {
             "tick": -126,
-            "debt_normal_usd": 1.995071618557658,
+            "debt_normal_usd": 1.9950718690805902,
             "collateral_normal_usd": 2.102423109751585,
             "ratio_pct": 82.79037365253312,
             "distance_pct_from_top": 0.0
           },
           {
             "tick": -127,
-            "debt_normal_usd": 20.5322101557265,
+            "debt_normal_usd": 20.53221273397454,
             "collateral_normal_usd": 21.669469814130732,
             "ratio_pct": 82.66637409139602,
             "distance_pct_from_top": -0.14977533699451762
           },
           {
             "tick": -128,
-            "debt_normal_usd": 0.09550666036464128,
+            "debt_normal_usd": 0.09550667235749837,
             "collateral_normal_usd": 0.10094787877878206,
             "ratio_pct": 82.5425602510195,
             "distance_pct_from_top": -0.29932634747330544
           },
           {
             "tick": -129,
-            "debt_normal_usd": 5.469933001143499,
+            "debt_normal_usd": 5.469933688007889,
             "collateral_normal_usd": 5.79023911648073,
             "ratio_pct": 82.41893185323963,
             "distance_pct_from_top": -0.4486533674221804
           },
           {
             "tick": -130,
-            "debt_normal_usd": 27.474762520348285,
+            "debt_normal_usd": 27.47476597037885,
             "collateral_normal_usd": 29.12724393425374,
             "ratio_pct": 82.29548862030917,
             "distance_pct_from_top": -0.5977567323236954
           },
           {
             "tick": -132,
-            "debt_normal_usd": 8197.493146617806,
+            "debt_normal_usd": 8197.494175984368,
             "collateral_normal_usd": 8716.626057622703,
             "ratio_pct": 82.04915654008667,
             "distance_pct_from_top": -0.8952938364033658
           },
           {
             "tick": -137,
-            "debt_normal_usd": 0.3821325435115007,
+            "debt_normal_usd": 0.38213259149622686,
             "collateral_normal_usd": 0.40938897816191405,
             "ratio_pct": 81.43654736201047,
             "distance_pct_from_top": -1.6352460205151242
           },
           {
             "tick": -138,
-            "debt_normal_usd": 21.843972538022136,
+            "debt_normal_usd": 21.84397528098935,
             "collateral_normal_usd": 23.437144443215242,
             "ratio_pct": 81.31457549876234,
             "distance_pct_from_top": -1.7825721622717117
           },
           {
             "tick": -139,
-            "debt_normal_usd": 590.2782791778792,
+            "debt_normal_usd": 590.2783532996518,
             "collateral_normal_usd": 634.2797273986675,
             "ratio_pct": 81.1927863192834,
             "distance_pct_from_top": -1.9296776458030185
           },
           {
             "tick": -144,
-            "debt_normal_usd": 0.5712376161030549,
+            "debt_normal_usd": 0.5712376878338733,
             "collateral_normal_usd": 0.6184371848534123,
             "ratio_pct": 80.58657111622433,
             "distance_pct_from_top": -2.661906739976838
           },
           {
             "tick": -145,
-            "debt_normal_usd": 4552.486114163858,
+            "debt_normal_usd": 4552.48668582362,
             "collateral_normal_usd": 4936.036698367313,
             "ratio_pct": 80.4658723077627,
             "distance_pct_from_top": -2.8076951971810593
           }
         ],
-        "danger_zone_debt_usd": 8865.565014833357,
-        "danger_zone_share_of_vault_debt": 0.6606911479148294,
-        "vault_debt_usd_in_window": 13418.622366613317
+        "danger_zone_debt_usd": 8865.566128090304,
+        "danger_zone_share_of_vault_debt": 0.6606911479148293,
+        "vault_debt_usd_in_window": 13418.624051601759
       },
       "0x3996464c0fcca8183e13ea5e5e74375e2c8744dd": {
         "vault_id": 17,
@@ -1177,21 +1184,21 @@
         "ticks": [
           {
             "tick": -18456,
-            "debt_normal_usd": 1.0112807715635084,
+            "debt_normal_usd": 1.011290765671207,
             "collateral_normal_usd": 1.108837756054361,
             "ratio_pct": 9.682774375390673e-11,
             "distance_pct_from_top": 0.0
           },
           {
             "tick": -18460,
-            "debt_normal_usd": 3.93334798634324,
+            "debt_normal_usd": 3.933383965130955,
             "collateral_normal_usd": 4.338725078492843,
             "ratio_pct": 9.624894939686062e-11,
             "distance_pct_from_top": -0.5977567323236954
           },
           {
             "tick": -18463,
-            "debt_normal_usd": 27.89962500752957,
+            "debt_normal_usd": 27.89988185609742,
             "collateral_normal_usd": 30.913700214987482,
             "ratio_pct": 9.581712524428312e-11,
             "distance_pct_from_top": -1.043728244037312
@@ -1199,7 +1206,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 32.84425376543632
+        "vault_debt_usd_in_window": 32.84455658689958
       },
       "0xbc345229c1b52e4c30530c614bb487323ba38da5": {
         "vault_id": 18,
@@ -1212,35 +1219,35 @@
         "ticks": [
           {
             "tick": -18451,
-            "debt_normal_usd": 2.032547820810997,
+            "debt_normal_usd": 2.032562802515106,
             "collateral_normal_usd": 2.2318819855123286,
             "ratio_pct": 9.755613372668355e-11,
             "distance_pct_from_top": 0.0
           },
           {
             "tick": -18452,
-            "debt_normal_usd": 3.1999122171519283,
+            "debt_normal_usd": 3.199936187878502,
             "collateral_normal_usd": 3.5190018365570674,
             "ratio_pct": 9.74100186986356e-11,
             "distance_pct_from_top": -0.14977533699451762
           },
           {
             "tick": -18453,
-            "debt_normal_usd": 0.9099327758622399,
+            "debt_normal_usd": 0.9099397673241573,
             "collateral_normal_usd": 1.0021714733189477,
             "ratio_pct": 9.726412251486329e-11,
             "distance_pct_from_top": -0.29932634747331655
           },
           {
             "tick": -18454,
-            "debt_normal_usd": 313.8443363876956,
+            "debt_normal_usd": 313.84668651768015,
             "collateral_normal_usd": 346.1764560212272,
             "ratio_pct": 9.711844484759189e-11,
             "distance_pct_from_top": -0.44865336742219153
           },
           {
             "tick": -18457,
-            "debt_normal_usd": 103.14450531686707,
+            "debt_normal_usd": 103.1452773740188,
             "collateral_normal_usd": 114.28314696296185,
             "ratio_pct": 9.668271967439511e-11,
             "distance_pct_from_top": -0.8952938364033769
@@ -1248,7 +1255,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 423.1312345183878
+        "vault_debt_usd_in_window": 423.1344026494167
       },
       "0xf2c8f54447cbd591c396b0dd7ac15faf552d0fa4": {
         "vault_id": 19,
@@ -1261,7 +1268,7 @@
         "ticks": [
           {
             "tick": -13723,
-            "debt_normal_usd": 5362.132266212513,
+            "debt_normal_usd": 5362.18151617584,
             "collateral_normal_usd": 7476.067987966408,
             "ratio_pct": 1.166711130453128e-07,
             "distance_pct_from_top": 0.0
@@ -1269,7 +1276,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 5362.132266212513
+        "vault_debt_usd_in_window": 5362.18151617584
       },
       "0x6f72895cf6904489bcd862c941c3d02a3ee4f03e": {
         "vault_id": 21,
@@ -1282,15 +1289,15 @@
         "ticks": [
           {
             "tick": 4036,
-            "debt_normal_usd": 39090.0252518051,
-            "collateral_normal_usd": 49544.42064085355,
+            "debt_normal_usd": 39090.38428512711,
+            "collateral_normal_usd": 49544.42435131254,
             "ratio_pct": 42388.57813775963,
             "distance_pct_from_top": 0.0
           }
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 39090.0252518051
+        "vault_debt_usd_in_window": 39090.38428512711
       },
       "0x3a0b7c8840d74d39552ef53f586dd8c3d1234c40": {
         "vault_id": 22,
@@ -1303,14 +1310,14 @@
         "ticks": [
           {
             "tick": 4054,
-            "debt_normal_usd": 25.859605844882974,
+            "debt_normal_usd": 25.859799608256115,
             "collateral_normal_usd": 32.18019240151343,
             "ratio_pct": 43547.77941306629,
             "distance_pct_from_top": 0.0
           },
           {
             "tick": 4047,
-            "debt_normal_usd": 2343.155459904053,
+            "debt_normal_usd": 2343.1730014820037,
             "collateral_normal_usd": 2946.689452943517,
             "ratio_pct": 43093.25893968104,
             "distance_pct_from_top": -1.043728244037323
@@ -1318,7 +1325,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 2369.0150657489357
+        "vault_debt_usd_in_window": 2369.03280109026
       },
       "0xad439b9d61b25af1ca4cd211e3ecb9afbaaed84a": {
         "vault_id": 23,
@@ -1331,15 +1338,15 @@
         "ticks": [
           {
             "tick": 17617,
-            "debt_normal_usd": 84799.58113964536,
-            "collateral_normal_usd": 97460.85451913234,
+            "debt_normal_usd": 84799.78442476019,
+            "collateral_normal_usd": 97460.86194005031,
             "ratio_pct": 29366358249031.574,
             "distance_pct_from_top": 0.0
           }
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 84799.58113964536
+        "vault_debt_usd_in_window": 84799.78442476019
       },
       "0x991416539e9da46db233bccbaea38c4f852776d4": {
         "vault_id": 24,
@@ -1348,19 +1355,19 @@
         "top_tick": -17828,
         "to_tick_scanned": -17847,
         "liquidation_threshold_pct": 93.0,
-        "liquidation_tick_estimated": -17795,
+        "liquidation_tick_estimated": -17796,
         "ticks": [
           {
             "tick": -17828,
-            "debt_normal_usd": 73288.34218551933,
-            "collateral_normal_usd": 84638.77950695282,
+            "debt_normal_usd": 73288.37063237159,
+            "collateral_normal_usd": 84638.93335599585,
             "ratio_pct": 2.481982365903476e-10,
             "distance_pct_from_top": 0.0
           }
         ],
-        "danger_zone_debt_usd": 73288.34218551933,
+        "danger_zone_debt_usd": 73288.37063237159,
         "danger_zone_share_of_vault_debt": 1.0,
-        "vault_debt_usd_in_window": 73288.34218551933
+        "vault_debt_usd_in_window": 73288.37063237159
       },
       "0x1c6068ec051f0ac1688ca1fe76810fa9c8644278": {
         "vault_id": 27,
@@ -1471,7 +1478,7 @@
         "ticks": [
           {
             "tick": 17461,
-            "debt_normal_usd": 7339.106816020087,
+            "debt_normal_usd": 7339.124409638692,
             "collateral_normal_usd": 10701.12461660619,
             "ratio_pct": 23243489390715.973,
             "distance_pct_from_top": 0.0
@@ -1479,7 +1486,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 7339.106816020087
+        "vault_debt_usd_in_window": 7339.124409638692
       },
       "0xe6b5d1cdc4935295c84772c4700932b4bfc93274": {
         "vault_id": 30,
@@ -1492,21 +1499,21 @@
         "ticks": [
           {
             "tick": 4062,
-            "debt_normal_usd": 22273.14833988236,
+            "debt_normal_usd": 22273.31509124299,
             "collateral_normal_usd": 27593.51789231194,
             "ratio_pct": 44073.10452210721,
             "distance_pct_from_top": 0.0
           },
           {
             "tick": 4061,
-            "debt_normal_usd": 50146.60746663967,
+            "debt_normal_usd": 50146.982898156835,
             "collateral_normal_usd": 62218.277719394435,
             "ratio_pct": 44007.09388128528,
             "distance_pct_from_top": -0.14977533699452872
           },
           {
             "tick": 4055,
-            "debt_normal_usd": 0.19128739683913407,
+            "debt_normal_usd": 0.19128839561940797,
             "collateral_normal_usd": 0.2388047757219725,
             "ratio_pct": 43613.10108218589,
             "distance_pct_from_top": -1.043728244037323
@@ -1514,7 +1521,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 72419.94709391886
+        "vault_debt_usd_in_window": 72420.48927779545
       },
       "0x69deb634edc47a35b7b05056768d957f029cbc0a": {
         "vault_id": 31,
@@ -1523,19 +1530,19 @@
         "top_tick": -17925,
         "to_tick_scanned": -17944,
         "liquidation_threshold_pct": 93.0,
-        "liquidation_tick_estimated": -17794,
+        "liquidation_tick_estimated": -17795,
         "ticks": [
           {
             "tick": -17925,
-            "debt_normal_usd": 31761.824399208774,
-            "collateral_normal_usd": 42460.26856556331,
+            "debt_normal_usd": 31761.826867475185,
+            "collateral_normal_usd": 42460.34574615186,
             "ratio_pct": 2.146130810740949e-10,
             "distance_pct_from_top": 0.0
           }
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 31761.824399208774
+        "vault_debt_usd_in_window": 31761.826867475185
       },
       "0xb242508306db9a52932a754d2f408ca0cb479135": {
         "vault_id": 32,
@@ -1565,26 +1572,26 @@
         "top_tick": -17797,
         "to_tick_scanned": -17816,
         "liquidation_threshold_pct": 91.0,
-        "liquidation_tick_estimated": -17660,
+        "liquidation_tick_estimated": -17661,
         "ticks": [
           {
             "tick": -17797,
-            "debt_normal_usd": 42145.75888646202,
-            "collateral_normal_usd": 55766.1083519511,
+            "debt_normal_usd": 42145.76197179504,
+            "collateral_normal_usd": 55766.110109671936,
             "ratio_pct": 2.6000293717742323e-10,
             "distance_pct_from_top": 0.0
           },
           {
             "tick": -17804,
             "debt_normal_usd": 351.26639842192327,
-            "collateral_normal_usd": 469.6884485720441,
+            "collateral_normal_usd": 469.6884633763974,
             "ratio_pct": 2.572892130867758e-10,
             "distance_pct_from_top": -1.043728244037323
           }
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 42497.025284883945
+        "vault_debt_usd_in_window": 42497.02837021696
       },
       "0x57fed7c9b3c763999c519264931790cbca331417": {
         "vault_id": 34,
@@ -1684,7 +1691,7 @@
         "top_tick": 4231,
         "to_tick_scanned": 4212,
         "liquidation_threshold_pct": 85.0,
-        "liquidation_tick_estimated": 4461,
+        "liquidation_tick_estimated": 4459,
         "ticks": [
           {
             "tick": 4231,
@@ -1905,14 +1912,14 @@
         "ticks": [
           {
             "tick": 5,
-            "debt_normal_usd": 412.86481008624816,
+            "debt_normal_usd": 412.86879742671465,
             "collateral_normal_usd": 442.83391713289626,
             "ratio_pct": 100.75225337753204,
             "distance_pct_from_top": 0.0
           },
           {
             "tick": 0,
-            "debt_normal_usd": 0.20908546902318145,
+            "debt_normal_usd": 0.20908748831601345,
             "collateral_normal_usd": 0.22594962665488438,
             "ratio_pct": 100.0,
             "distance_pct_from_top": -0.7466367771579718
@@ -1920,7 +1927,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 413.07389555527135
+        "vault_debt_usd_in_window": 413.07788491503067
       },
       "0xd4b34f90930645eaf53e05edd2950f93ee0d5eb7": {
         "vault_id": 57,
@@ -1929,11 +1936,11 @@
         "top_tick": 4417,
         "to_tick_scanned": 4398,
         "liquidation_threshold_pct": 82.0,
-        "liquidation_tick_estimated": 4907,
+        "liquidation_tick_estimated": 4906,
         "ticks": [
           {
             "tick": 4417,
-            "debt_normal_usd": 34.83144365565181,
+            "debt_normal_usd": 34.831780048629646,
             "collateral_normal_usd": 76.86444290283836,
             "ratio_pct": 75034.70542815169,
             "distance_pct_from_top": 0.0
@@ -1941,7 +1948,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 34.83144365565181
+        "vault_debt_usd_in_window": 34.831780048629646
       },
       "0xe58ed61ff0c9db46c8772ff7286b6b187d4fe68f": {
         "vault_id": 59,
@@ -1954,22 +1961,22 @@
         "ticks": [
           {
             "tick": 22359,
-            "debt_normal_usd": 8144.597605779781,
-            "collateral_normal_usd": 12207.920261825362,
+            "debt_normal_usd": 8144.676264174448,
+            "collateral_normal_usd": 12207.920880235193,
             "ratio_pct": 3.586511305064218e+16,
             "distance_pct_from_top": 0.0
           },
           {
             "tick": 22347,
-            "debt_normal_usd": 10685.390330063174,
-            "collateral_normal_usd": 16306.992936186505,
+            "debt_normal_usd": 10685.493526769806,
+            "collateral_normal_usd": 16306.994173006171,
             "ratio_pct": 3.522579152943415e+16,
             "distance_pct_from_top": -1.7825721622717228
           }
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 18829.987935842953
+        "vault_debt_usd_in_window": 18830.169790944252
       },
       "0x81a0dd6c5ddb8474b483c31309b66d7173263cbb": {
         "vault_id": 60,
@@ -1982,7 +1989,7 @@
         "ticks": [
           {
             "tick": 22414,
-            "debt_normal_usd": 0.7304076478955303,
+            "debt_normal_usd": 0.730414701981664,
             "collateral_normal_usd": 1.0064356310143079,
             "ratio_pct": 3.894705767927941e+16,
             "distance_pct_from_top": 0.0
@@ -1990,7 +1997,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 0.7304076478955303
+        "vault_debt_usd_in_window": 0.730414701981664
       },
       "0x20b32c597633f12b44cfafe0ab27408028ca0f6a": {
         "vault_id": 61,
@@ -2398,7 +2405,7 @@
         "top_tick": -913,
         "to_tick_scanned": -920,
         "liquidation_threshold_pct": 88.0,
-        "liquidation_tick_estimated": -844,
+        "liquidation_tick_estimated": -843,
         "ticks": [
           {
             "tick": -913,
@@ -2598,7 +2605,7 @@
         "ticks": [
           {
             "tick": -11443,
-            "debt_normal_usd": 22189.127104874402,
+            "debt_normal_usd": 22189.330906717412,
             "collateral_normal_usd": 34310.72311623299,
             "ratio_pct": 3.557440266732565e-06,
             "distance_pct_from_top": 0.0
@@ -2606,7 +2613,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 22189.127104874402
+        "vault_debt_usd_in_window": 22189.330906717412
       },
       "0x888f89dd277a3e69c3607f67ded93877ed359ba7": {
         "vault_id": 89,
@@ -2619,7 +2626,7 @@
         "ticks": [
           {
             "tick": -11328,
-            "debt_normal_usd": 53656.48670222063,
+            "debt_normal_usd": 53656.88840964923,
             "collateral_normal_usd": 70260.60912795072,
             "ratio_pct": 4.2266597092856e-06,
             "distance_pct_from_top": 0.0
@@ -2627,7 +2634,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 53656.48670222063
+        "vault_debt_usd_in_window": 53656.88840964923
       },
       "0x1810278703934b8e9e68cf535bdbb46d920f0470": {
         "vault_id": 90,
@@ -2640,7 +2647,7 @@
         "ticks": [
           {
             "tick": 6756,
-            "debt_normal_usd": 11.340691498903464,
+            "debt_normal_usd": 11.340801024338829,
             "collateral_normal_usd": 24.575107167463898,
             "ratio_pct": 2499440.032996303,
             "distance_pct_from_top": 0.0
@@ -2648,7 +2655,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 11.340691498903464
+        "vault_debt_usd_in_window": 11.340801024338829
       },
       "0xb24ebfe45bf2c6edd12186fd17550527f9cbeb3f": {
         "vault_id": 91,
@@ -2738,15 +2745,15 @@
         "ticks": [
           {
             "tick": -66,
-            "debt_normal_usd": 5310.651940078981,
+            "debt_normal_usd": 5310.653795308475,
             "collateral_normal_usd": 5775.057975339826,
             "ratio_pct": 90.58098947355712,
             "distance_pct_from_top": 0.0
           }
         ],
-        "danger_zone_debt_usd": 5310.651940078981,
+        "danger_zone_debt_usd": 5310.653795308475,
         "danger_zone_share_of_vault_debt": 1.0,
-        "vault_debt_usd_in_window": 5310.651940078981
+        "vault_debt_usd_in_window": 5310.653795308475
       },
       "0xbee8d906bac00610d8056c88eeec5e9e9d48104c": {
         "vault_id": 95,
@@ -2860,26 +2867,26 @@
         "top_tick": 13280,
         "to_tick_scanned": 13261,
         "liquidation_threshold_pct": 90.0,
-        "liquidation_tick_estimated": 13393,
+        "liquidation_tick_estimated": 13392,
         "ticks": [
           {
             "tick": 13280,
-            "debt_normal_usd": 18845.7078413558,
-            "collateral_normal_usd": 25338.49302544077,
+            "debt_normal_usd": 18845.75301910779,
+            "collateral_normal_usd": 25338.687677678183,
             "ratio_pct": 44122915451.93689,
             "distance_pct_from_top": 0.0
           },
           {
             "tick": 13270,
-            "debt_normal_usd": 281988.4765616992,
-            "collateral_normal_usd": 384865.7159932917,
+            "debt_normal_usd": 281989.15255676216,
+            "collateral_normal_usd": 384868.67256516335,
             "ratio_pct": 43466499328.723145,
             "distance_pct_from_top": -1.4876988895459076
           }
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 300834.184403055
+        "vault_debt_usd_in_window": 300834.90557586995
       },
       "0xf140ea1c1d657eaab802ff7626dc220cd4007ce7": {
         "vault_id": 101,
@@ -2892,15 +2899,15 @@
         "ticks": [
           {
             "tick": -4438,
-            "debt_normal_usd": 557427.0187608553,
-            "collateral_normal_usd": 741678.2922339006,
+            "debt_normal_usd": 557427.2352042963,
+            "collateral_normal_usd": 741683.9898707019,
             "ratio_pct": 0.1291420844180083,
             "distance_pct_from_top": 0.0
           }
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 557427.0187608553
+        "vault_debt_usd_in_window": 557427.2352042963
       },
       "0x1581f8c3de000b9a1cde85caf68ec979d76a7b5e": {
         "vault_id": 102,
@@ -2913,15 +2920,15 @@
         "ticks": [
           {
             "tick": -4412,
-            "debt_normal_usd": 16509.19738292993,
-            "collateral_normal_usd": 21144.620995224217,
+            "debt_normal_usd": 16509.198617063143,
+            "collateral_normal_usd": 21144.783429456642,
             "ratio_pct": 0.13427420392021902,
             "distance_pct_from_top": 0.0
           }
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 16509.19738292993
+        "vault_debt_usd_in_window": 16509.198617063143
       },
       "0x18d31f2e1374574df8309f92305008beb49d3618": {
         "vault_id": 103,
@@ -3032,7 +3039,7 @@
         "ticks": [
           {
             "tick": 3876,
-            "debt_normal_usd": 10.992530051098617,
+            "debt_normal_usd": 10.992630991586374,
             "collateral_normal_usd": 18.536902286283052,
             "ratio_pct": 33350.03302468238,
             "distance_pct_from_top": 0.0
@@ -3040,7 +3047,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 10.992530051098617
+        "vault_debt_usd_in_window": 10.992630991586374
       },
       "0x9f64b16071387bcfd63a1ea7a518e22597575f14": {
         "vault_id": 108,
@@ -3053,7 +3060,7 @@
         "ticks": [
           {
             "tick": 3876,
-            "debt_normal_usd": 10.921693257372471,
+            "debt_normal_usd": 10.921775157354931,
             "collateral_normal_usd": 18.536902286283052,
             "ratio_pct": 33350.03302468238,
             "distance_pct_from_top": 0.0
@@ -3061,7 +3068,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 10.921693257372471
+        "vault_debt_usd_in_window": 10.921775157354931
       },
       "0x6388eefd6b462662ac295d7b436cbca8651beaf4": {
         "vault_id": 109,
@@ -3074,7 +3081,7 @@
         "ticks": [
           {
             "tick": 22311,
-            "debt_normal_usd": 11.15753823026703,
+            "debt_normal_usd": 11.157645986854023,
             "collateral_normal_usd": 18.536902286283052,
             "ratio_pct": 3.3375396197969276e+16,
             "distance_pct_from_top": 0.0
@@ -3082,7 +3089,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 11.15753823026703
+        "vault_debt_usd_in_window": 11.157645986854023
       },
       "0xee327311d8640156e87ec33ea55fcbf2309e0ce6": {
         "vault_id": 110,
@@ -3259,11 +3266,11 @@
         "top_tick": 23583,
         "to_tick_scanned": 23564,
         "liquidation_threshold_pct": 80.0,
-        "liquidation_tick_estimated": 23754,
+        "liquidation_tick_estimated": 23749,
         "ticks": [
           {
             "tick": 23583,
-            "debt_normal_usd": 18904.384903971248,
+            "debt_normal_usd": 18904.56747759392,
             "collateral_normal_usd": 27368.16961638228,
             "ratio_pct": 2.2461535751362896e+17,
             "distance_pct_from_top": 0.0
@@ -3271,7 +3278,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 18904.384903971248
+        "vault_debt_usd_in_window": 18904.56747759392
       },
       "0xb94887d3a6fb124901800b79aea69b732b71450a": {
         "vault_id": 121,
@@ -3280,11 +3287,11 @@
         "top_tick": 4967,
         "to_tick_scanned": 4948,
         "liquidation_threshold_pct": 80.0,
-        "liquidation_tick_estimated": 5319,
+        "liquidation_tick_estimated": 5315,
         "ticks": [
           {
             "tick": 4967,
-            "debt_normal_usd": 40.87568282982154,
+            "debt_normal_usd": 40.87607759651358,
             "collateral_normal_usd": 77.669838183065,
             "ratio_pct": 171114.44704559242,
             "distance_pct_from_top": 0.0
@@ -3292,7 +3299,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 40.87568282982154
+        "vault_debt_usd_in_window": 40.87607759651358
       },
       "0x78ec4dfb48f9dee98a1793854e94b5eaf4305516": {
         "vault_id": 123,
@@ -3301,7 +3308,7 @@
         "top_tick": -12728,
         "to_tick_scanned": -12743,
         "liquidation_threshold_pct": 80.0,
-        "liquidation_tick_estimated": -12643,
+        "liquidation_tick_estimated": -12647,
         "ticks": [
           {
             "tick": -12728,
@@ -3329,7 +3336,7 @@
         "top_tick": 4609,
         "to_tick_scanned": 4590,
         "liquidation_threshold_pct": 80.0,
-        "liquidation_tick_estimated": 5791,
+        "liquidation_tick_estimated": 5787,
         "ticks": [
           {
             "tick": 4609,
@@ -3455,33 +3462,33 @@
         "top_tick": 4801,
         "to_tick_scanned": 4782,
         "liquidation_threshold_pct": 92.0,
-        "liquidation_tick_estimated": 4915,
+        "liquidation_tick_estimated": 4913,
         "ticks": [
           {
             "tick": 4801,
-            "debt_normal_usd": 136925.35186223267,
-            "collateral_normal_usd": 173478.0882534964,
+            "debt_normal_usd": 136926.22874366777,
+            "collateral_normal_usd": 173478.40358682297,
             "ratio_pct": 133422.28547493904,
             "distance_pct_from_top": 0.0
           },
           {
             "tick": 4798,
-            "debt_normal_usd": 2.661841437999097,
-            "collateral_normal_usd": 3.387628706743076,
+            "debt_normal_usd": 2.6618584846548727,
+            "collateral_normal_usd": 3.3876348644788448,
             "ratio_pct": 132823.68189826407,
             "distance_pct_from_top": -0.44865336742219153
           },
           {
             "tick": 4793,
-            "debt_normal_usd": 25783.403527060193,
-            "collateral_normal_usd": 33060.44055730821,
+            "debt_normal_usd": 25783.568646138432,
+            "collateral_normal_usd": 33060.500651691334,
             "ratio_pct": 131831.97144043632,
             "distance_pct_from_top": -1.1919403335370338
           }
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 162711.41723073088
+        "vault_debt_usd_in_window": 162712.45924829086
       },
       "0x6215524825971dd99830a155cdad91fa2a17b88a": {
         "vault_id": 129,
@@ -3490,19 +3497,19 @@
         "top_tick": 4954,
         "to_tick_scanned": 4935,
         "liquidation_threshold_pct": 88.0,
-        "liquidation_tick_estimated": 5034,
+        "liquidation_tick_estimated": 5032,
         "ticks": [
           {
             "tick": 4954,
-            "debt_normal_usd": 0.3624633709616974,
-            "collateral_normal_usd": 0.4439446037083685,
+            "debt_normal_usd": 0.36246569220751923,
+            "collateral_normal_usd": 0.44394461770141325,
             "ratio_pct": 167812.4898122142,
             "distance_pct_from_top": 0.0
           }
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 0.3624633709616974
+        "vault_debt_usd_in_window": 0.36246569220751923
       },
       "0x8f4920064d548ad20cce6c20056c7c437b712cd2": {
         "vault_id": 132,
@@ -3515,21 +3522,21 @@
         "ticks": [
           {
             "tick": 22515,
-            "debt_normal_usd": 31573.58629672327,
-            "collateral_normal_usd": 41012.26985876456,
+            "debt_normal_usd": 31573.7884966175,
+            "collateral_normal_usd": 41012.27047583117,
             "ratio_pct": 4.531280741814356e+16,
             "distance_pct_from_top": 0.0
           },
           {
             "tick": 22507,
-            "debt_normal_usd": 1552.7436975042183,
+            "debt_normal_usd": 1552.7536414050614,
             "collateral_normal_usd": 2041.2544746097103,
             "ratio_pct": 4.477270579026875e+16,
             "distance_pct_from_top": -1.1919403335370116
           },
           {
             "tick": 22498,
-            "debt_normal_usd": 6118.031590973992,
+            "debt_normal_usd": 6118.070771361325,
             "collateral_normal_usd": 8152.067521622104,
             "ratio_pct": 4.417278267752238e+16,
             "distance_pct_from_top": -2.5158996000868017
@@ -3537,7 +3544,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 39244.361585201485
+        "vault_debt_usd_in_window": 39244.61290938388
       },
       "0xacb58522296b514a0796179c48f85297f0cecb87": {
         "vault_id": 133,
@@ -3802,7 +3809,7 @@
         "ticks": [
           {
             "tick": 2,
-            "debt_normal_usd": 37.67695651240603,
+            "debt_normal_usd": 37.67730330794316,
             "collateral_normal_usd": 41.809710801044986,
             "ratio_pct": 100.30022500000003,
             "distance_pct_from_top": 0.0
@@ -3810,7 +3817,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 37.67695651240603
+        "vault_debt_usd_in_window": 37.67730330794316
       },
       "0xc8ea45f5af4eeb4dd226928d7e93440547b59c7d": {
         "vault_id": 147,
@@ -3823,7 +3830,7 @@
         "ticks": [
           {
             "tick": -8,
-            "debt_normal_usd": 364.48566340707976,
+            "debt_normal_usd": 364.4883920747881,
             "collateral_normal_usd": 413.21324355711846,
             "ratio_pct": 98.80805966646298,
             "distance_pct_from_top": 0.0
@@ -3831,7 +3838,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 364.48566340707976
+        "vault_debt_usd_in_window": 364.4883920747881
       },
       "0x1632d655caa579e348946218c3ae760382f3411f": {
         "vault_id": 148,
@@ -3844,7 +3851,7 @@
         "ticks": [
           {
             "tick": 17510,
-            "debt_normal_usd": 10.756927307822753,
+            "debt_normal_usd": 10.757031195416454,
             "collateral_normal_usd": 47.701277892908024,
             "ratio_pct": 25014858709070.938,
             "distance_pct_from_top": 0.0
@@ -3852,7 +3859,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 10.756927307822753
+        "vault_debt_usd_in_window": 10.757031195416454
       },
       "0x5f36cdfeb6a37f22d71d57fc4e7a0a0eedc70208": {
         "vault_id": 149,
@@ -3886,7 +3893,7 @@
         "ticks": [
           {
             "tick": -26,
-            "debt_normal_usd": 36.49422382504244,
+            "debt_normal_usd": 36.49455962706111,
             "collateral_normal_usd": 41.04368359561618,
             "ratio_pct": 96.17788126656107,
             "distance_pct_from_top": 0.0
@@ -3894,7 +3901,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 36.49422382504244
+        "vault_debt_usd_in_window": 36.49455962706111
       },
       "0xbc4e61930ce55c80a11a0f79a3b9898f227dfca6": {
         "vault_id": 151,
@@ -3907,7 +3914,7 @@
         "ticks": [
           {
             "tick": -40,
-            "debt_normal_usd": 12096.724551777572,
+            "debt_normal_usd": 12096.815116178908,
             "collateral_normal_usd": 13983.843837523187,
             "ratio_pct": 94.18068716081204,
             "distance_pct_from_top": 0.0
@@ -3915,7 +3922,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 12096.724551777572
+        "vault_debt_usd_in_window": 12096.815116178908
       },
       "0x13f82c0c281a3b973a7288d3ebc468495aa4eed7": {
         "vault_id": 152,
@@ -3928,7 +3935,7 @@
         "ticks": [
           {
             "tick": 18389,
-            "debt_normal_usd": 0.059759322392861434,
+            "debt_normal_usd": 0.0597598995327594,
             "collateral_normal_usd": 0.0691421249027709,
             "ratio_pct": 93408477761489.66,
             "distance_pct_from_top": 0.0
@@ -3936,7 +3943,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 0.059759322392861434
+        "vault_debt_usd_in_window": 0.0597598995327594
       },
       "0x23e4df0b4830c6ed5f0df8ea343c7e4a59e3482b": {
         "vault_id": 153,
@@ -4033,7 +4040,7 @@
         "ticks": [
           {
             "tick": -18485,
-            "debt_normal_usd": 21.689975077702098,
+            "debt_normal_usd": 21.690173960445296,
             "collateral_normal_usd": 24.92226625659197,
             "ratio_pct": 9.270905557163189e-11,
             "distance_pct_from_top": 0.0
@@ -4048,7 +4055,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 21.700716744656447
+        "vault_debt_usd_in_window": 21.700915627399645
       },
       "0xbbe29582232cf6450d71a3b53535ce58035fabe2": {
         "vault_id": 161,
@@ -4061,56 +4068,56 @@
         "ticks": [
           {
             "tick": -18483,
-            "debt_normal_usd": 168110.25386863362,
+            "debt_normal_usd": 168111.51245362993,
             "collateral_normal_usd": 193482.09311715965,
             "ratio_pct": 9.298739133372182e-11,
             "distance_pct_from_top": 0.0
           },
           {
             "tick": -18487,
-            "debt_normal_usd": 141640.50353873876,
+            "debt_normal_usd": 141641.5639527446,
             "collateral_normal_usd": 163997.73483827818,
             "ratio_pct": 9.243155294181232e-11,
             "distance_pct_from_top": -0.5977567323236954
           },
           {
             "tick": -18488,
-            "debt_normal_usd": 64.85532266558586,
+            "debt_normal_usd": 64.855808072799,
             "collateral_normal_usd": 75.20504390785622,
             "ratio_pct": 9.229311327190446e-11,
             "distance_pct_from_top": -0.7466367771579718
           },
           {
             "tick": -18491,
-            "debt_normal_usd": 30715.785762014697,
+            "debt_normal_usd": 30716.015720186184,
             "collateral_normal_usd": 35777.98122559608,
             "ratio_pct": 9.187903711131128e-11,
             "distance_pct_from_top": -1.1919403335370227
           },
           {
             "tick": -18492,
-            "debt_normal_usd": 69806.28061330426,
+            "debt_normal_usd": 69806.8032290777,
             "collateral_normal_usd": 81432.85372072822,
             "ratio_pct": 9.17414249738505e-11,
             "distance_pct_from_top": -1.3399304378802213
           },
           {
             "tick": -18495,
-            "debt_normal_usd": 15.210592586430947,
+            "debt_normal_usd": 15.210706447382172,
             "collateral_normal_usd": 17.823958685277802,
             "ratio_pct": 9.132982398138422e-11,
             "distance_pct_from_top": -1.7825721622717339
           },
           {
             "tick": -18496,
-            "debt_normal_usd": 37969.53597080686,
+            "debt_normal_usd": 37969.820235658175,
             "collateral_normal_usd": 44559.90536325887,
             "ratio_pct": 9.119303442973962e-11,
             "distance_pct_from_top": -1.9296776458030185
           },
           {
             "tick": -18498,
-            "debt_normal_usd": 17537.176119231575,
+            "debt_normal_usd": 17537.30741489126,
             "collateral_normal_usd": 20642.892024032237,
             "ratio_pct": 9.092006965063098e-11,
             "distance_pct_from_top": -2.223227959661156
@@ -4118,7 +4125,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 465859.60178798175
+        "vault_debt_usd_in_window": 465863.089520708
       },
       "0x767dd0dec9f68bb85028708066337a758e06ad7b": {
         "vault_id": 162,
@@ -4131,112 +4138,112 @@
         "ticks": [
           {
             "tick": -49,
-            "debt_normal_usd": 1189511.156264463,
+            "debt_normal_usd": 1189522.6442520467,
             "collateral_normal_usd": 1369156.153515415,
             "ratio_pct": 92.91873146693959,
             "distance_pct_from_top": 0.0
           },
           {
             "tick": -50,
-            "debt_normal_usd": 4226273.088655912,
+            "debt_normal_usd": 4226313.904895856,
             "collateral_normal_usd": 4871839.508994128,
             "ratio_pct": 92.77956212375395,
             "distance_pct_from_top": -0.14977533699451762
           },
           {
             "tick": -51,
-            "debt_normal_usd": 2588949.4956203243,
+            "debt_normal_usd": 2588974.4990173113,
             "collateral_normal_usd": 2988890.1152930874,
             "ratio_pct": 92.64060122192106,
             "distance_pct_from_top": -0.29932634747331655
           },
           {
             "tick": -52,
-            "debt_normal_usd": 1399375.0807864289,
+            "debt_normal_usd": 1399388.5955848976,
             "collateral_normal_usd": 1617973.7075427882,
             "ratio_pct": 92.50184844924718,
             "distance_pct_from_top": -0.44865336742219153
           },
           {
             "tick": -53,
-            "debt_normal_usd": 83660.6943341611,
+            "debt_normal_usd": 83661.50230726224,
             "collateral_normal_usd": 96874.55983348138,
             "ratio_pct": 92.36330349400617,
             "distance_pct_from_top": -0.5977567323236954
           },
           {
             "tick": -54,
-            "debt_normal_usd": 710051.5213279743,
+            "debt_normal_usd": 710058.3788198255,
             "collateral_normal_usd": 823434.5654061051,
             "ratio_pct": 92.22496604493877,
             "distance_pct_from_top": -0.7466367771579718
           },
           {
             "tick": -55,
-            "debt_normal_usd": 604219.7766271912,
+            "debt_normal_usd": 604225.6120237365,
             "collateral_normal_usd": 701754.3620195877,
             "ratio_pct": 92.08683579125187,
             "distance_pct_from_top": -0.8952938364033769
           },
           {
             "tick": -56,
-            "debt_normal_usd": 460575.0393814007,
+            "debt_normal_usd": 460579.48749464954,
             "collateral_normal_usd": 535724.534778591,
             "ratio_pct": 91.94891242261795,
             "distance_pct_from_top": -1.043728244037323
           },
           {
             "tick": -57,
-            "debt_normal_usd": 104767.03911385285,
+            "debt_normal_usd": 104768.05092651068,
             "collateral_normal_usd": 122044.09247802434,
             "ratio_pct": 91.81119562917418,
             "distance_pct_from_top": -1.1919403335370227
           },
           {
             "tick": -58,
-            "debt_normal_usd": 1350750.067636282,
+            "debt_normal_usd": 1350763.1128270933,
             "collateral_normal_usd": 1575861.4938915821,
             "ratio_pct": 91.67368510152188,
             "distance_pct_from_top": -1.3399304378802102
           },
           {
             "tick": -59,
-            "debt_normal_usd": 160024.8018860099,
+            "debt_normal_usd": 160026.34736368572,
             "collateral_normal_usd": 186974.03375798868,
             "ratio_pct": 91.5363805307258,
             "distance_pct_from_top": -1.4876988895458965
           },
           {
             "tick": -61,
-            "debt_normal_usd": 483918.0919036626,
+            "debt_normal_usd": 483922.76545800647,
             "collateral_normal_usd": 567110.6010777111,
             "ratio_pct": 91.2623880262739,
             "distance_pct_from_top": -1.7825721622717339
           },
           {
             "tick": -62,
-            "debt_normal_usd": 23339.197273332604,
+            "debt_normal_usd": 23339.422677194583,
             "collateral_normal_usd": 27392.569683634356,
             "ratio_pct": 91.1256994770583,
             "distance_pct_from_top": -1.9296776458030296
           },
           {
             "tick": -63,
-            "debt_normal_usd": 388705.8959708024,
+            "debt_normal_usd": 388709.6499906644,
             "collateral_normal_usd": 456897.66862790665,
             "ratio_pct": 90.98921565357794,
             "distance_pct_from_top": -2.0765628016006343
           },
           {
             "tick": -64,
-            "debt_normal_usd": 1354658.438333728,
+            "debt_normal_usd": 1354671.5212705615,
             "collateral_normal_usd": 1594698.4573955503,
             "ratio_pct": 90.85293624920413,
             "distance_pct_from_top": -2.223227959661145
           },
           {
             "tick": -68,
-            "debt_normal_usd": 16773.581620663743,
+            "debt_normal_usd": 16773.743615527244,
             "collateral_normal_usd": 19864.534315448233,
             "ratio_pct": 90.30985670626075,
             "distance_pct_from_top": -2.8076951971810704
@@ -4244,7 +4251,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 15145552.966736186
+        "vault_debt_usd_in_window": 15145699.23852483
       },
       "0xc8c9ef21613eb49f6959252154ee8632e40a67ce": {
         "vault_id": 163,
@@ -4347,6 +4354,13 @@
             "distance_pct_from_top": -0.8952938364033769
           },
           {
+            "tick": -18072,
+            "debt_normal_usd": null,
+            "collateral_normal_usd": null,
+            "ratio_pct": 1.7217338024200487e-10,
+            "distance_pct_from_top": -1.1919403335370227
+          },
+          {
             "tick": -18073,
             "debt_normal_usd": null,
             "collateral_normal_usd": null,
@@ -4397,14 +4411,14 @@
         "ticks": [
           {
             "tick": -57,
-            "debt_normal_usd": 596257.2250369614,
+            "debt_normal_usd": 596262.7015321427,
             "collateral_normal_usd": 720466.7255125386,
             "ratio_pct": 91.81119562917418,
             "distance_pct_from_top": 0.0
           },
           {
             "tick": -64,
-            "debt_normal_usd": 6303204.021333704,
+            "debt_normal_usd": 6303261.914919945,
             "collateral_normal_usd": 7696589.310837558,
             "ratio_pct": 90.85293624920413,
             "distance_pct_from_top": -1.043728244037323
@@ -4412,7 +4426,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 6899461.246370665
+        "vault_debt_usd_in_window": 6899524.616452089
       },
       "0x21b204f9e2e0371085c7774d43e0cc7954a20f64": {
         "vault_id": 166,
@@ -4425,7 +4439,7 @@
         "ticks": [
           {
             "tick": -50,
-            "debt_normal_usd": 10549486.768215554,
+            "debt_normal_usd": 10549565.748632435,
             "collateral_normal_usd": 12670285.011693783,
             "ratio_pct": 92.77956212375395,
             "distance_pct_from_top": 0.0
@@ -4433,7 +4447,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 10549486.768215554
+        "vault_debt_usd_in_window": 10549565.748632435
       },
       "0x46a719593378079f242fab86f0d7dea50d84f28b": {
         "vault_id": 167,
@@ -4537,7 +4551,7 @@
         "ticks": [
           {
             "tick": -18523,
-            "debt_normal_usd": 522.8857333120625,
+            "debt_normal_usd": 522.8905354808115,
             "collateral_normal_usd": 649.7378437556671,
             "ratio_pct": 8.757616413101259e-11,
             "distance_pct_from_top": 0.0
@@ -4545,7 +4559,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 522.8857333120625
+        "vault_debt_usd_in_window": 522.8905354808115
       },
       "0x4aff5c338453d0ef0165900ca174cce3e9c46dff": {
         "vault_id": 172,
@@ -4558,7 +4572,7 @@
         "ticks": [
           {
             "tick": -18459,
-            "debt_normal_usd": 19883741.181535847,
+            "debt_normal_usd": 19883890.044361237,
             "collateral_normal_usd": 22517097.418800503,
             "ratio_pct": 9.639332282095589e-11,
             "distance_pct_from_top": 0.0
@@ -4566,7 +4580,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 19883741.181535847
+        "vault_debt_usd_in_window": 19883890.044361237
       },
       "0x1d3fadd621946c104d72bc2d01a79acdf9719eba": {
         "vault_id": 173,
@@ -4691,7 +4705,7 @@
         "ticks": [
           {
             "tick": -553,
-            "debt_normal_usd": 10.249656319801531,
+            "debt_normal_usd": 10.249755308303207,
             "collateral_normal_usd": 25.704227390533017,
             "ratio_pct": 43.65385914820513,
             "distance_pct_from_top": 0.0
@@ -4699,7 +4713,7 @@
         ],
         "danger_zone_debt_usd": 0.0,
         "danger_zone_share_of_vault_debt": 0.0,
-        "vault_debt_usd_in_window": 10.249656319801531
+        "vault_debt_usd_in_window": 10.249755308303207
       },
       "0x1449fa85260fd18edb742f9e2dfb2f2bade65c84": {
         "vault_id": 180,
@@ -4768,345 +4782,345 @@
     "collateral_concentration": [
       {
         "asset": "ETH",
-        "usd": 153068962.69420862,
-        "share": 0.2487130016244558
+        "usd": 153116173.79987472,
+        "share": 0.24877282086632754
       },
       {
         "asset": "wstETH",
-        "usd": 152877615.6695316,
-        "share": 0.24840209278949885
+        "usd": 152867046.4805499,
+        "share": 0.24836805561883443
       },
       {
         "asset": "sUSDai",
-        "usd": 78091683.39489983,
-        "share": 0.12688670934455257
+        "usd": 78091678.97865945,
+        "share": 0.126878087295339
       },
       {
         "asset": "WBTC",
-        "usd": 71447320.06138378,
-        "share": 0.1160906634350785
+        "usd": 71477377.9083482,
+        "share": 0.11613161751043477
       },
       {
         "asset": "reUSD",
-        "usd": 35131599.392337374,
-        "share": 0.057083326253355
+        "usd": 35084378.75568068,
+        "share": 0.05700272972338653
       },
       {
         "asset": "PST",
         "usd": 34044381.58141365,
-        "share": 0.05531676822346485
+        "share": 0.05531301253470094
       },
       {
         "asset": "cbBTC",
-        "usd": 27023913.464810494,
-        "share": 0.04390961116591445
+        "usd": 27023913.55551929,
+        "share": 0.04390663010454498
       },
       {
         "asset": "USDT",
-        "usd": 25815561.335820317,
-        "share": 0.041946228911728584
-      },
-      {
-        "asset": "weETH",
-        "usd": 8353883.168709857,
-        "share": 0.013573746901653626
+        "usd": 25791226.287389077,
+        "share": 0.041903843061684515
       },
       {
         "asset": "USDC",
-        "usd": 8192579.274488838,
-        "share": 0.013311653430846162
+        "usd": 8402867.030789342,
+        "share": 0.013652410994453917
+      },
+      {
+        "asset": "weETH",
+        "usd": 8353881.436847348,
+        "share": 0.013572822508898564
       },
       {
         "asset": "osETH",
-        "usd": 8088472.953097029,
-        "share": 0.013142497024310869
+        "usd": 8057489.177444417,
+        "share": 0.013091264378070507
       },
       {
         "asset": "GHO",
-        "usd": 6802474.659250317,
-        "share": 0.011052951958368864
+        "usd": 6686488.002244213,
+        "share": 0.010863754237885147
       },
       {
         "asset": "PAXG",
-        "usd": 2691811.178152854,
-        "share": 0.004373770006282203
+        "usd": 2691739.496356394,
+        "share": 0.004373356588841536
       },
       {
         "asset": "XAUt",
-        "usd": 1452983.0497581982,
-        "share": 0.0023608690439534167
+        "usd": 1453054.7660483338,
+        "share": 0.002360825274380004
       },
       {
         "asset": "LBTC",
         "usd": 1335726.0987884381,
-        "share": 0.0021703449316597878
+        "share": 0.0021701975777861718
       },
       {
         "asset": "eBTC",
         "usd": 326654.2074458113,
-        "share": 0.0005307617363907258
+        "share": 0.0005307257007372757
       },
       {
         "asset": "USDe",
-        "usd": 221832.53879027176,
-        "share": 0.0003604430030059221
+        "usd": 197920.7690146302,
+        "share": 0.0003215683019885041
       },
       {
         "asset": "syrupUSDC",
         "usd": 154578.4508315785,
-        "share": 0.000251165682553063
+        "share": 0.00025114862985526194
       },
       {
         "asset": "sUSDe",
-        "usd": 107799.2168271575,
-        "share": 0.00017515678108702756
+        "usd": 113308.2477856128,
+        "share": 0.00018409559048863046
       },
       {
         "asset": "tBTC",
         "usd": 104645.06012267106,
-        "share": 0.00017003177228211452
+        "share": 0.0001700202281077678
       },
       {
         "asset": "USDtb",
-        "usd": 95498.40850779809,
-        "share": 0.00015516990128026508
+        "usd": 97233.70517105116,
+        "share": 0.0001579787589931731
       }
     ],
     "debt_pool_sizes": [
       {
         "asset": "USDC",
-        "usd": 143545466.7923708,
-        "share": 0.2965648718993135
-      },
-      {
-        "asset": "ETH",
-        "usd": 130871089.12673959,
-        "share": 0.2703796131600162
+        "usd": 142292882.16817072,
+        "share": 0.29375906554038106
       },
       {
         "asset": "USDT",
-        "usd": 129898103.35849582,
-        "share": 0.2683694249864221
+        "usd": 131399031.03632626,
+        "share": 0.27126906126283407
+      },
+      {
+        "asset": "ETH",
+        "usd": 130859180.11268356,
+        "share": 0.2701545564440128
       },
       {
         "asset": "wstETH",
-        "usd": 39176369.38661885,
-        "share": 0.08093836209699311
+        "usd": 39185841.34885918,
+        "share": 0.08089790551469637
       },
       {
         "asset": "GHO",
-        "usd": 22774984.64782767,
-        "share": 0.04705310836713112
+        "usd": 22882037.204293974,
+        "share": 0.047239227741900515
       },
       {
         "asset": "WBTC",
-        "usd": 15029035.05632618,
-        "share": 0.031049979883353254
+        "usd": 15029040.909575237,
+        "share": 0.031026970191995636
       },
       {
         "asset": "USDtb",
-        "usd": 1471682.147632065,
-        "share": 0.0030404946762986633
+        "usd": 1471691.603823336,
+        "share": 0.003038259846278337
       },
       {
         "asset": "cbBTC",
-        "usd": 1260476.9986597896,
-        "share": 0.0026041449304718776
+        "usd": 1266647.7665151064,
+        "share": 0.002614953457900514
       }
     ],
     "lender_pool_attribution": {
       "USDC": {
-        "ETH": 86051085.51386051,
-        "wstETH": 31638299.120852306,
-        "sUSDe": 33187033.16798248,
-        "weETH": 29021139.749108456,
-        "WBTC": 41899761.004403375,
-        "cbBTC": 31600299.196006134,
-        "GHO": 13762529.228579054,
-        "USDC": 12478250.344971132,
-        "tBTC": 22178.022297019776,
-        "USDT": 84045865.76191378,
-        "USDe": 4641163.808581219,
-        "LBTC": 10.976549472888717,
-        "XAUt": 102846.37794519315,
-        "PAXG": 711473.6330843399,
-        "USDtb": 36.260861963759254,
-        "syrupUSDC": 122009.31116817835,
-        "syrupUSDT": 62.65373176652307,
-        "reUSD": 40925835.00614038,
-        "PST": 53287345.42097449,
-        "sUSDai": 99861060.77501167,
-        "USDai": 0.18053956267313614
+        "ETH": 84906030.74292292,
+        "wstETH": 30488875.849350028,
+        "sUSDe": 32672777.69356791,
+        "weETH": 27871692.35112261,
+        "WBTC": 40750432.328968525,
+        "cbBTC": 30450875.57419825,
+        "GHO": 13420993.981390914,
+        "USDC": 12375319.115216233,
+        "tBTC": 22178.226747480374,
+        "USDT": 80174395.0598993,
+        "USDe": 4138523.6307674916,
+        "LBTC": 10.976650413376472,
+        "XAUt": 102849.92529791954,
+        "PAXG": 711477.5926037303,
+        "USDtb": 36.91986304558344,
+        "syrupUSDC": 122009.61700955303,
+        "syrupUSDT": 62.65430842653728,
+        "reUSD": 39373527.27409707,
+        "PST": 51426840.068513244,
+        "sUSDai": 96684018.61950399,
+        "USDai": 0.1805398440355602
       },
       "USDT": {
-        "ETH": 27708626.85506657,
-        "wstETH": 5129987.983059097,
-        "sUSDe": 2474431.969654077,
-        "weETH": 2783710.773668343,
-        "WBTC": 28122560.967932194,
-        "cbBTC": 7778257.924198077,
-        "tBTC": 53596.31674870895,
-        "USDT": 24929066.12648002,
-        "USDe": 282736.35064592015,
-        "LBTC": 10.913719994445863,
-        "XAUt": 673203.5300196741,
-        "PAXG": 796743.7021965148,
-        "USDtb": 85693.91059543051,
-        "syrupUSDC": 374.5491227531281,
-        "syrupUSDT": 12130.510282620657,
-        "reUSD": 7428313.542717305,
-        "PST": 16940436.30209273,
-        "USDC": 891552.7394322505,
-        "sUSDai": 36192114.040985435
+        "ETH": 28859213.731970653,
+        "wstETH": 6280405.3075772,
+        "sUSDe": 3797798.9927608636,
+        "weETH": 3934110.479017251,
+        "WBTC": 29273150.953239396,
+        "cbBTC": 8928695.13567676,
+        "tBTC": 53596.71922519837,
+        "USDT": 28469437.903636754,
+        "USDe": 338301.2346945126,
+        "LBTC": 10.913801894428323,
+        "XAUt": 673245.2147701227,
+        "PAXG": 796713.0558907451,
+        "USDtb": 87251.1546674591,
+        "syrupUSDC": 374.5519353183794,
+        "syrupUSDT": 12130.601343379778,
+        "reUSD": 8855893.20677467,
+        "PST": 18802578.30182975,
+        "USDC": 1355195.5035086602,
+        "sUSDai": 39371920.13819461
       },
       "ETH": {
-        "wstETH": 124975777.63066165,
-        "WBTC": 129672.41564113626,
-        "cbBTC": 7359.976794493636,
-        "ETH": 5160146.736668251,
-        "USDC": 598132.3669740767
+        "wstETH": 124972133.03876306,
+        "WBTC": 129672.72753353536,
+        "cbBTC": 7359.994496954165,
+        "ETH": 5153801.775902341,
+        "USDC": 596212.5759876708
       },
       "wstETH": {
-        "weETH": 3552864.345877898,
-        "wstETH": 4754147.052301679,
-        "ETH": 23317043.091821108,
-        "osETH": 7552314.896618172
+        "weETH": 3552862.77857628,
+        "wstETH": 4748634.20073865,
+        "ETH": 23360967.367315367,
+        "osETH": 7523377.002228886
       },
       "WBTC": {
-        "ETH": 570564.8925959062,
+        "ETH": 570565.1152234455,
         "wstETH": 295.9010650426227,
         "weETH": 51.141874654817904,
-        "WBTC": 112.71145283365865,
-        "cbBTC": 11399794.160020266,
-        "eBTC": 290278.0320521129,
-        "LBTC": 984340.5627071008,
-        "USDC": 1783597.6545582633
+        "WBTC": 112.71149670336169,
+        "cbBTC": 11399798.600096956,
+        "eBTC": 290278.14456111274,
+        "LBTC": 984340.9462248154,
+        "USDC": 1783598.3490325043
       },
       "cbBTC": {
-        "ETH": 31773.0476066011,
+        "ETH": 31773.050074867522,
         "weETH": 28.868843998389565,
-        "wstETH": 191139.6898963648,
-        "WBTC": 2.0462750368946223e-05,
-        "cbBTC": 649266.5955351882,
-        "USDC": 351497.34793977713,
-        "LBTC": 36771.44881739704
+        "wstETH": 191139.7053230299,
+        "WBTC": 2.046275029997531e-05,
+        "cbBTC": 649266.6476434933,
+        "USDC": 357668.04298123496,
+        "LBTC": 36771.45162801964
       },
       "GHO": {
-        "ETH": 157396.8340091853,
-        "wstETH": 534.3319154282923,
-        "sUSDe": 42152.64661382358,
-        "weETH": 34.79682073597599,
-        "WBTC": 18841.412076088334,
-        "cbBTC": 46789.973608758155,
-        "GHO": 154676.3403768845,
-        "USDC": 773.1186347095124,
-        "tBTC": 11.333816571158863,
-        "LBTC": 11.13078522866976,
-        "XAUt": 20318.507500377258,
-        "PAXG": 52.387073358303475,
-        "USDe": 22987.863415085096,
-        "USDtb": 44.63829585337577,
-        "syrupUSDC": 12.842837277265266,
-        "syrupUSDT": 26.641287647299723,
-        "reUSD": 22518826.964993343,
-        "sUSDai": 10.235739132024753
+        "ETH": 157398.35884984542,
+        "wstETH": 534.3370919684417,
+        "sUSDe": 88605.02990420582,
+        "weETH": 34.79715784318297,
+        "WBTC": 18841.59460931023,
+        "cbBTC": 46790.426904116306,
+        "GHO": 389291.4290932322,
+        "USDC": 4976.178627041439,
+        "tBTC": 11.333926371743168,
+        "LBTC": 11.130893062312047,
+        "XAUt": 20318.704607624215,
+        "PAXG": 52.38731676661662,
+        "USDe": 58214.40349224343,
+        "USDtb": 45.44956943835647,
+        "syrupUSDC": 12.842961697051692,
+        "syrupUSDT": 26.641545744731594,
+        "reUSD": 22625877.039836347,
+        "sUSDai": 10.235838294573433
       },
       "USDtb": {
-        "ETH": 944742.084606167,
-        "wstETH": 3002.4718245800177,
-        "weETH": 97.63811148517756,
-        "WBTC": 399377.9217366456,
-        "cbBTC": 124462.031353187
+        "ETH": 944748.1549807165,
+        "wstETH": 3002.4911167538785,
+        "weETH": 97.63873885207133,
+        "WBTC": 399380.4879117015,
+        "cbBTC": 124462.83107531205
       }
     },
     "lender_pool_concentrations": [
       {
         "debt_asset": "GHO",
         "collateral_asset": "reUSD",
-        "share": 0.9797822353264443,
-        "usd": 22518826.964993343,
-        "pool_total_usd": 22983501.999799486
+        "share": 0.9664613417807193,
+        "usd": 22625877.039836347,
+        "pool_total_usd": 23411052.322225153
       },
       {
         "debt_asset": "ETH",
         "collateral_asset": "wstETH",
-        "share": 0.9549532938449932,
-        "usd": 124975777.63066165,
-        "pool_total_usd": 130871089.1267396
+        "share": 0.955012349390764,
+        "usd": 124972133.03876306,
+        "pool_total_usd": 130859180.11268356
       },
       {
         "debt_asset": "WBTC",
         "collateral_asset": "cbBTC",
-        "share": 0.7585180364072506,
-        "usd": 11399794.160020266,
-        "pool_total_usd": 15029035.056326179
+        "share": 0.7585180364259949,
+        "usd": 11399798.600096956,
+        "pool_total_usd": 15029040.909575235
       },
       {
         "debt_asset": "USDtb",
         "collateral_asset": "ETH",
         "share": 0.6419470985132598,
-        "usd": 944742.084606167,
-        "pool_total_usd": 1471682.147632065
+        "usd": 944748.1549807165,
+        "pool_total_usd": 1471691.603823336
       },
       {
         "debt_asset": "wstETH",
         "collateral_asset": "ETH",
-        "share": 0.5951813161069825,
-        "usd": 23317043.091821108,
-        "pool_total_usd": 39176369.38661885
+        "share": 0.5961583715745706,
+        "usd": 23360967.367315367,
+        "pool_total_usd": 39185841.34885918
       },
       {
         "debt_asset": "cbBTC",
         "collateral_asset": "cbBTC",
-        "share": 0.5150959487761579,
-        "usd": 649266.5955351882,
-        "pool_total_usd": 1260476.9986597893
+        "share": 0.5125865807428082,
+        "usd": 649266.6476434933,
+        "pool_total_usd": 1266647.7665151064
       },
       {
         "debt_asset": "cbBTC",
         "collateral_asset": "USDC",
-        "share": 0.27886058080671766,
-        "usd": 351497.34793977713,
-        "pool_total_usd": 1260476.9986597893
+        "share": 0.28237372096370356,
+        "usd": 357668.04298123496,
+        "pool_total_usd": 1266647.7665151064
       },
       {
         "debt_asset": "USDtb",
         "collateral_asset": "WBTC",
         "share": 0.27137512157719945,
-        "usd": 399377.9217366456,
-        "pool_total_usd": 1471682.147632065
+        "usd": 399380.4879117015,
+        "pool_total_usd": 1471691.603823336
       },
       {
         "debt_asset": "USDT",
         "collateral_asset": "sUSDai",
-        "share": 0.22301776281133423,
-        "usd": 36192114.040985435,
-        "pool_total_usd": 162283549.0086177
+        "share": 0.21886661338742058,
+        "usd": 39371920.13819461,
+        "pool_total_usd": 179890023.1005152
       }
     ],
     "smart_supply_pools": [
       {
         "dex_addr": "0x0b1a513ee24972daef112bc777a5610d4325c9e7",
         "label": "wstETH/ETH",
-        "supply_usd": 32226713.31102237,
+        "supply_usd": 32226763.04730455,
         "contributing_vault_ids": [
           44
         ],
         "supply_legs": [
           {
             "sym": "wstETH",
-            "usd": 6722466.380714148
+            "usd": 6711892.569675423
           },
           {
             "sym": "ETH",
-            "usd": 25504246.930308223
+            "usd": 25514870.477629125
           }
         ]
       },
       {
         "dex_addr": "0x3c0441b42195f4ad6aa9a0978e06096ea616cda7",
         "label": "WBTC/cbBTC",
-        "supply_usd": 9886073.100825317,
+        "supply_usd": 9886073.134146914,
         "contributing_vault_ids": [
           51,
           52,
@@ -5119,68 +5133,68 @@
           },
           {
             "sym": "cbBTC",
-            "usd": 9886057.89721961
+            "usd": 9886057.930541206
           }
         ]
       },
       {
         "dex_addr": "0xde632c3a214d5f14c1d8ddf0b92f8bcd188fee45",
         "label": "GHO/USDC",
-        "supply_usd": 6790185.81610152,
+        "supply_usd": 6790289.149321563,
         "contributing_vault_ids": [
           61
         ],
         "supply_legs": [
           {
             "sym": "GHO",
-            "usd": 6714658.012713562
+            "usd": 6598670.664758625
           },
           {
             "sym": "USDC",
-            "usd": 75527.80338795832
+            "usd": 191618.48456293714
           }
         ]
       },
       {
         "dex_addr": "0x86f874212335af27c41cdb855c2255543d1499ce",
         "label": "weETH/ETH",
-        "supply_usd": 9009117.645464368,
+        "supply_usd": 9009129.915736433,
         "contributing_vault_ids": [
           74
         ],
         "supply_legs": [
           {
             "sym": "weETH",
-            "usd": 2281713.567165286
+            "usd": 2281711.835302776
           },
           {
             "sym": "ETH",
-            "usd": 6727404.078299082
+            "usd": 6727418.080433657
           }
         ]
       },
       {
         "dex_addr": "0x836951eb21f3df98273517b7249dceff270d34bf",
         "label": "USDC/ETH",
-        "supply_usd": 2633234.1454406045,
+        "supply_usd": 2633353.268166114,
         "contributing_vault_ids": [
           77
         ],
         "supply_legs": [
           {
             "sym": "USDC",
-            "usd": 887728.7547524903
+            "usd": 883482.2200160228
           },
           {
             "sym": "ETH",
-            "usd": 1745505.390688114
+            "usd": 1749871.0481500912
           }
         ]
       },
       {
         "dex_addr": "0x1dd125c32e4b5086c63cc13b3ca02c4a2a61fa9b",
         "label": "sUSDe/USDT",
-        "supply_usd": 200700.0200594369,
+        "supply_usd": 200699.6685898832,
         "contributing_vault_ids": [
           92,
           98,
@@ -5189,18 +5203,18 @@
         "supply_legs": [
           {
             "sym": "sUSDe",
-            "usd": 12836.180844186127
+            "usd": 18345.21180264141
           },
           {
             "sym": "USDT",
-            "usd": 187863.83921525077
+            "usd": 182354.4567872418
           }
         ]
       },
       {
         "dex_addr": "0xf063bd202e45d6b2843102cb4ece339026645d4a",
         "label": "USDe/USDT",
-        "supply_usd": 1680722.4636471416,
+        "supply_usd": 1680781.976300026,
         "contributing_vault_ids": [
           93,
           99,
@@ -5209,18 +5223,18 @@
         "supply_legs": [
           {
             "sym": "USDe",
-            "usd": 152520.35563541405
+            "usd": 130342.84295143996
           },
           {
             "sym": "USDT",
-            "usd": 1528202.1080117275
+            "usd": 1550439.133348586
           }
         ]
       },
       {
         "dex_addr": "0x5d538ae12f9539ac457cd5fdbdec02d5779f0971",
         "label": "eBTC/cbBTC",
-        "supply_usd": 3171968.6407886883,
+        "supply_usd": 3171968.650661754,
         "contributing_vault_ids": [
           96
         ],
@@ -5231,14 +5245,14 @@
           },
           {
             "sym": "cbBTC",
-            "usd": 2950088.4408410667
+            "usd": 2950088.4507141323
           }
         ]
       },
       {
         "dex_addr": "0xc8f989e9b7ece1b4d092ae4db7faf1294146bda4",
         "label": "LBTC/cbBTC",
-        "supply_usd": 852550.9353613082,
+        "supply_usd": 852550.9384466412,
         "contributing_vault_ids": [
           97,
           114
@@ -5250,7 +5264,7 @@
           },
           {
             "sym": "cbBTC",
-            "usd": 806853.5554834361
+            "usd": 806853.5585687691
           }
         ]
       },
@@ -5275,7 +5289,7 @@
       {
         "dex_addr": "0x218c659b6bbb73d47c7926fc90d9893342534b84",
         "label": "PAXG/XAUt",
-        "supply_usd": 2109412.8680590233,
+        "supply_usd": 2109412.9025526987,
         "contributing_vault_ids": [
           122,
           123,
@@ -5284,25 +5298,25 @@
         "supply_legs": [
           {
             "sym": "PAXG",
-            "usd": 1024611.3197423354
+            "usd": 1024539.6379458755
           },
           {
             "sym": "XAUt",
-            "usd": 1084801.5483166878
+            "usd": 1084873.2646068234
           }
         ]
       },
       {
         "dex_addr": "0xdd5f2afab5ae5484339f9ad40fb4d51fc5c96be3",
         "label": "GHO/sUSDe",
-        "supply_usd": 154928.1623784189,
+        "supply_usd": 154928.85132987227,
         "contributing_vault_ids": [
           125
         ],
         "supply_legs": [
           {
             "sym": "GHO",
-            "usd": 87562.78828720338
+            "usd": 87563.47723865672
           },
           {
             "sym": "sUSDe",
@@ -5313,7 +5327,7 @@
       {
         "dex_addr": "0xb0960263e39c70c9b6e9ea2a382b18095264a364",
         "label": "USDe/USDtb",
-        "supply_usd": 164685.7003853565,
+        "supply_usd": 164686.7399569421,
         "contributing_vault_ids": [
           137,
           138,
@@ -5322,18 +5336,18 @@
         "supply_legs": [
           {
             "sym": "USDe",
-            "usd": 69187.2918775584
+            "usd": 67453.03478589092
           },
           {
             "sym": "USDtb",
-            "usd": 95498.40850779809
+            "usd": 97233.70517105116
           }
         ]
       },
       {
         "dex_addr": "0x862fc0a67623a4e6f0776103340836c91728b06d",
         "label": "GHO/USDe",
-        "supply_usd": 378.74952685132183,
+        "supply_usd": 378.7515242295848,
         "contributing_vault_ids": [
           139,
           141
@@ -5341,7 +5355,7 @@
         "supply_legs": [
           {
             "sym": "GHO",
-            "usd": 253.85824955198913
+            "usd": 253.8602469302521
           },
           {
             "sym": "USDe",
@@ -5352,7 +5366,7 @@
       {
         "dex_addr": "0x79eea4a1be86c43a9a9c4384b0b28a07af24ae29",
         "label": "syrupUSDC/USDC",
-        "supply_usd": 1253588.274260384,
+        "supply_usd": 1253596.7717184739,
         "contributing_vault_ids": [
           145
         ],
@@ -5363,14 +5377,14 @@
           },
           {
             "sym": "USDC",
-            "usd": 1102039.0887185223
+            "usd": 1102047.5861766122
           }
         ]
       },
       {
         "dex_addr": "0x93b17a6497f045dc60309921e47c1fa4dc792302",
         "label": "syrupUSDT/USDT",
-        "supply_usd": 103.62478980651889,
+        "supply_usd": 103.62522127959721,
         "contributing_vault_ids": [
           149
         ],
@@ -5381,32 +5395,32 @@
           },
           {
             "sym": "USDT",
-            "usd": 73.28532980901211
+            "usd": 73.28576128209043
           }
         ]
       },
       {
         "dex_addr": "0xc0652bddcff7739dadf0c9567584b35ca63eb8e1",
         "label": "ETH/osETH",
-        "supply_usd": 10743914.36306856,
+        "supply_usd": 10743927.04201432,
         "contributing_vault_ids": [
           159
         ],
         "supply_legs": [
           {
             "sym": "ETH",
-            "usd": 2655441.4099715315
+            "usd": 2686437.864569903
           },
           {
             "sym": "osETH",
-            "usd": 8088472.953097029
+            "usd": 8057489.177444417
           }
         ]
       },
       {
         "dex_addr": "0xb96cee75211700bc148b95b1c907d726791f4457",
         "label": "reUSD/USDT",
-        "supply_usd": 24850858.251781113,
+        "supply_usd": 24850997.206358872,
         "contributing_vault_ids": [
           164,
           170
@@ -5414,18 +5428,18 @@
         "supply_legs": [
           {
             "sym": "reUSD",
-            "usd": 5269341.905121944
+            "usd": 5222121.268465249
           },
           {
             "sym": "USDT",
-            "usd": 19581516.34665917
+            "usd": 19628875.93789362
           }
         ]
       },
       {
         "dex_addr": "0x40d66b5f8f1521f97c2aca54dd200fe3ca035328",
         "label": "PST/USDC",
-        "supply_usd": 5155112.658444269,
+        "supply_usd": 5155127.818231398,
         "contributing_vault_ids": [
           169
         ],
@@ -5436,14 +5450,14 @@
           },
           {
             "sym": "USDC",
-            "usd": 1966079.4844216304
+            "usd": 1966094.6442087602
           }
         ]
       },
       {
         "dex_addr": "0xa2e3a4e2a08b5714fa974ce88466d736bd8b39d9",
         "label": "sUSDai/USDC",
-        "supply_usd": 15111886.23219028,
+        "supply_usd": 15111956.629622012,
         "contributing_vault_ids": [
           175,
           178
@@ -5451,18 +5465,18 @@
         "supply_legs": [
           {
             "sym": "sUSDai",
-            "usd": 15051021.887990024
+            "usd": 14962697.080464851
           },
           {
             "sym": "USDC",
-            "usd": 60864.34420025478
+            "usd": 149259.54915716153
           }
         ]
       },
       {
         "dex_addr": "0xb9b87a1b79891a8c9251f501b1b5d71bc7c8aa24",
         "label": "sUSDai/USDT",
-        "supply_usd": 15101640.627186287,
+        "supply_usd": 15101538.735465068,
         "contributing_vault_ids": [
           176,
           177
@@ -5470,18 +5484,18 @@
         "supply_legs": [
           {
             "sym": "sUSDai",
-            "usd": 10583734.870581923
+            "usd": 10672055.26186672
           },
           {
             "sym": "USDT",
-            "usd": 4517905.756604364
+            "usd": 4429483.473598347
           }
         ]
       },
       {
         "dex_addr": "0x4653583be64eb008d7f34cc6023a81c5033e6f70",
         "label": "USDai/USDC",
-        "supply_usd": 50.91505078819068,
+        "supply_usd": 50.915437560158615,
         "contributing_vault_ids": [
           180
         ],
@@ -5492,7 +5506,7 @@
           },
           {
             "sym": "USDC",
-            "usd": 50.16989195817275
+            "usd": 50.17027873014068
           }
         ]
       }
@@ -5501,25 +5515,25 @@
       {
         "dex_addr": "0x0b1a513ee24972daef112bc777a5610d4325c9e7",
         "label": "wstETH/ETH",
-        "borrow_usd": 28797965.741722036,
+        "borrow_usd": 28797980.36690486,
         "contributing_vault_ids": [
           44
         ],
         "borrow_legs": [
           {
             "sym": "wstETH",
-            "usd": 22790821.912104864
+            "usd": 22800291.809934516
           },
           {
             "sym": "ETH",
-            "usd": 6007143.829617172
+            "usd": 5997688.556970344
           }
         ]
       },
       {
         "dex_addr": "0x667701e51b4d1ca244f17c78f7ab8744b4c99f9b",
         "label": "USDC/USDT",
-        "borrow_usd": 30974009.009351343,
+        "borrow_usd": 30974954.46163753,
         "contributing_vault_ids": [
           45,
           46,
@@ -5540,25 +5554,25 @@
         "borrow_legs": [
           {
             "sym": "USDC",
-            "usd": 28660762.892869305
+            "usd": 27511312.17272213
           },
           {
             "sym": "USDT",
-            "usd": 2313246.1164820394
+            "usd": 3463642.2889153995
           }
         ]
       },
       {
         "dex_addr": "0x3c0441b42195f4ad6aa9a0978e06096ea616cda7",
         "label": "WBTC/cbBTC",
-        "borrow_usd": 8698515.248907272,
+        "borrow_usd": 8698518.63655633,
         "contributing_vault_ids": [
           51
         ],
         "borrow_legs": [
           {
             "sym": "WBTC",
-            "usd": 8698501.943100091
+            "usd": 8698505.330749149
           },
           {
             "sym": "cbBTC",
@@ -5569,7 +5583,7 @@
       {
         "dex_addr": "0xde632c3a214d5f14c1d8ddf0b92f8bcd188fee45",
         "label": "GHO/USDC",
-        "borrow_usd": 6256820.604451068,
+        "borrow_usd": 6256832.383920822,
         "contributing_vault_ids": [
           61,
           125,
@@ -5579,36 +5593,36 @@
         "borrow_legs": [
           {
             "sym": "GHO",
-            "usd": 69505.78399060485
+            "usd": 176338.37264372644
           },
           {
             "sym": "USDC",
-            "usd": 6187314.820460463
+            "usd": 6080494.011277095
           }
         ]
       },
       {
         "dex_addr": "0x836951eb21f3df98273517b7249dceff270d34bf",
         "label": "USDC/ETH",
-        "borrow_usd": 1892079.5306814075,
+        "borrow_usd": 1892023.6006532381,
         "contributing_vault_ids": [
           77
         ],
         "borrow_legs": [
           {
             "sym": "USDC",
-            "usd": 1279462.990380825
+            "usd": 1282159.6551828063
           },
           {
             "sym": "ETH",
-            "usd": 612616.5403005825
+            "usd": 609863.9454704318
           }
         ]
       },
       {
         "dex_addr": "0xea734b615888c669667038d11950f44b177f15c0",
         "label": "USDC/USDT",
-        "borrow_usd": 193.78001341811705,
+        "borrow_usd": 193.78180036457354,
         "contributing_vault_ids": [
           126,
           127
@@ -5616,7 +5630,7 @@
         "borrow_legs": [
           {
             "sym": "USDC",
-            "usd": 193.76064007714405
+            "usd": 193.76242702360054
           },
           {
             "sym": "USDT",
@@ -5672,21 +5686,21 @@
         "borrow_token1": {
           "address": "0x0000000000000000000000000000000000000000"
         },
-        "supply_usd": 135153652.63193196,
-        "borrow_usd": 123721902.30918506,
+        "supply_usd": 135153656.9060741,
+        "borrow_usd": 123722199.88921192,
         "supply_legs": [
           [
             "wstETH",
-            135153652.63193196
+            135153656.9060741
           ]
         ],
         "borrow_legs": [
           [
             "ETH",
-            123721902.30918506
+            123722199.88921192
           ]
         ],
-        "share_of_system_debt": 0.25560939630740703
+        "share_of_system_debt": 0.2554204909779035
       },
       {
         "id": 11,
@@ -5703,8 +5717,8 @@
         "supply_dex_addr": "0x0000000000000000000000000000000000000000",
         "borrow_dex_addr": "0x0000000000000000000000000000000000000000",
         "oracle_addr": "0x5b2860C6D6F888319C752aaCDaf8165C21095E3a",
-        "oracle_price_operate": "1721635686893123682",
-        "oracle_price_liquidate": "1721635686893123682",
+        "oracle_price_operate": "1722152229249983862",
+        "oracle_price_liquidate": "1722152229249983862",
         "supply_token0": {
           "address": "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
           "name": "ETH",
@@ -5733,21 +5747,21 @@
         "borrow_token1": {
           "address": "0x0000000000000000000000000000000000000000"
         },
-        "supply_usd": 78719782.04132375,
-        "borrow_usd": 56542198.44230096,
+        "supply_usd": 78720924.69903839,
+        "borrow_usd": 56542719.680861406,
         "supply_legs": [
           [
             "ETH",
-            78719782.04132375
+            78720924.69903839
           ]
         ],
         "borrow_legs": [
           [
             "USDC",
-            56542198.44230096
+            56542719.680861406
           ]
         ],
-        "share_of_system_debt": 0.11681615736567282
+        "share_of_system_debt": 0.1167306209802602
       }
     ],
     "vault_labels": {
@@ -6474,11 +6488,11 @@
     }
   },
   "tier_d": {
-    "generated_at": "2026-11-23T07:42:05Z",
+    "generated_at": "2026-11-23T08:42:06Z",
     "tvl_by_chain": {
       "ethereum": {
-        "collateral_usd": 615444153.2788668,
-        "debt_usd": 484027207.51467085,
+        "collateral_usd": 615485941.2160151,
+        "debt_usd": 484386352.1502477,
         "n_vaults": 120
       }
     },
